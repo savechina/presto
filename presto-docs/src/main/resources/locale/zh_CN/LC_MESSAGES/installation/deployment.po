@@ -1,0 +1,310 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/installation/deployment.rst:3
+msgid "Deploying Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:6
+msgid "Installing Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:8
+msgid ""
+"Download the Presto server tarball, :download:`server`, and unpack it. The "
+"tarball will contain a single top-level directory, |presto_server_release|, "
+"which we will call the *installation* directory."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:12
+msgid ""
+"Presto needs a *data* directory for storing logs, local metadata, etc. We "
+"recommend creating a data directory outside of the installation directory, "
+"which allows it to be easily preserved when upgrading Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:17
+msgid "Configuring Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:19
+msgid ""
+"Create an ``etc`` directory inside the installation directory. This will "
+"hold the following configuration:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:22
+msgid "Node Properties: environmental configuration specific to each node"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:23
+msgid "JVM Config: command line options for the Java Virtual Machine"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:24
+msgid "Config Properties: configuration for the Presto server"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:25
+msgid "Catalog Properties: configuration for :doc:`/connector` (data sources)"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:30
+msgid "Node Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:32
+msgid ""
+"The node properties file, ``etc/node.properties``, contains configuration "
+"specific to each node. A *node* is a single installed instance of Presto on "
+"a machine. This file is typically created by the deployment system when "
+"Presto is first installed. The following is a minimal "
+"``etc/node.properties``:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:43
+msgid "The above properties are described below:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:45
+msgid ""
+"``node.environment``: The name of the environment. All Presto nodes in a "
+"cluster must have the same environment name."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:49
+msgid ""
+"``node.id``: The unique identifier for this installation of Presto. This "
+"must be unique for every node. This identifier should remain consistent "
+"across reboots or upgrades of Presto. If running multiple installations of "
+"Presto on a single machine (i.e. multiple nodes on the same machine), each "
+"installation must have a unique identifier."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:56
+msgid ""
+"``node.data-dir``: The location (filesystem path) of the data directory. "
+"Presto will store logs and other data here."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:63
+msgid "JVM Config"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:65
+msgid ""
+"The JVM config file, ``etc/jvm.config``, contains a list of command line "
+"options used for launching the Java Virtual Machine. The format of the file "
+"is a list of options, one per line. These options are not interpreted by the"
+" shell, so options containing spaces or other special characters should not "
+"be quoted (as demonstrated by the ``OnOutOfMemoryError`` option in the "
+"example below)."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:72
+msgid ""
+"The following provides a good starting point for creating "
+"``etc/jvm.config``:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:86
+msgid ""
+"Because an ``OutOfMemoryError`` will typically leave the JVM in an "
+"inconsistent state, we write a heap dump (for debugging) and forcibly "
+"terminate the process when this occurs."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:90
+msgid ""
+"Presto compiles queries to bytecode at runtime and thus produces many "
+"classes, so we enable class unloading."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:97
+msgid "Config Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:99
+msgid ""
+"The config properties file, ``etc/config.properties``, contains the "
+"configuration for the Presto server. Every Presto server can function as "
+"both a coordinator and a worker, but dedicating a single machine to only "
+"perform coordination work provides the best performance on larger clusters."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:105
+msgid "The following is a minimal configuration for the coordinator:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:116
+msgid "And this is a minimal configuration for the workers:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:125
+msgid ""
+"Alternatively, if you are setting up a single machine for testing that will "
+"function as both a coordinator and worker, use this configuration:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:137
+msgid "These properties require some explanation:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:139
+msgid ""
+"``coordinator``: Allow this Presto instance to function as a coordinator "
+"(accept queries from clients and manage query execution)."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:143
+msgid ""
+"``node-scheduler.include-coordinator``: Allow scheduling work on the "
+"coordinator. For larger clusters, processing work on the coordinator can "
+"impact query performance because the machine's resources are not available "
+"for the critical task of scheduling, managing and monitoring query "
+"execution."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:150
+msgid ""
+"``http-server.http.port``: Specifies the port for the HTTP server. Presto "
+"uses HTTP for all communication, internal and external."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:154
+msgid ""
+"``task.max-memory=1GB``: The maximum amount of memory used by a single task "
+"(a fragment of a query plan running on a specific node). In particular, this"
+" limits the number of groups in a ``GROUP BY``, the size of the right-hand "
+"table in a ``JOIN``, the number of rows in an ``ORDER BY`` or the number of "
+"rows processed by a window function. This value should be tuned based on the"
+" number of concurrent queries and the size and complexity of queries.  "
+"Setting it too low will limit the queries that can be run, while setting it "
+"too high will cause the JVM to run out of memory."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:165
+msgid ""
+"``discovery-server.enabled``: Presto uses the Discovery service to find all "
+"the nodes in the cluster. Every Presto instance will register itself with "
+"the Discovery service on startup. In order to simplify deployment and avoid "
+"running an additional service, the Presto coordinator can run an embedded "
+"version of the Discovery service. It shares the HTTP server with Presto and "
+"thus uses the same port."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:173
+msgid ""
+"``discovery.uri``: The URI to the Discovery server. Because we have enabled "
+"the embedded version of Discovery in the Presto coordinator, this should be "
+"the URI of the Presto coordinator. Replace ``example.net:8080`` to match the"
+" host and port of the Presto coordinator. This URI must not end in a slash."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:181
+msgid "Log Levels"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:183
+msgid ""
+"The optional log levels file, ``etc/log.properties``, allows setting the "
+"minimum log level for named logger hierarchies. Every logger has a name, "
+"which is typically the fully qualified name of the class that uses the "
+"logger. Loggers have a hierarchy based on the dots in the name (like Java "
+"packages). For example, consider the following log levels file:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:193
+msgid ""
+"This would set the minimum level to ``INFO`` for both "
+"``com.facebook.presto.server`` and ``com.facebook.presto.hive``. The default"
+" minimum level is ``INFO`` (thus the above example does not actually change "
+"anything). There are four levels: ``DEBUG``, ``INFO``, ``WARN`` and "
+"``ERROR``."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:200
+msgid "Catalog Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:202
+msgid ""
+"Presto accesses data via *connectors*, which are mounted in catalogs. The "
+"connector provides all of the schemas and tables inside of the catalog. For "
+"example, the Hive connector maps each Hive database to a schema, so if the "
+"Hive connector is mounted as the ``hive`` catalog, and Hive contains a table"
+" ``clicks`` in database ``web``, that table would be accessed in Presto as "
+"``hive.web.clicks``."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:209
+msgid ""
+"Catalogs are registered by creating a catalog properties file in the "
+"``etc/catalog`` directory. For example, create "
+"``etc/catalog/jmx.properties`` with the following contents to mount the "
+"``jmx`` connector as the ``jmx`` catalog:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:218
+msgid ""
+"See :doc:`/connector` for more information about configuring connectors."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:223
+msgid "Running Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:225
+msgid ""
+"The installation directory contains the launcher script in ``bin/launcher``."
+" Presto can be started as a daemon by running running the following:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:232
+msgid ""
+"Alternatively, it can be run in the foreground, with the logs and other "
+"output being written to stdout/stderr (both streams should be captured if "
+"using a supervision system like daemontools):"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:240
+msgid ""
+"Run the launcher with ``--help`` to see the supported commands and command "
+"line options. In particular, the ``--verbose`` option is very useful for "
+"debugging the installation."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:244
+msgid "After launching, you can find the log files in ``var/log``:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:246
+msgid ""
+"``launcher.log``: This log is created by the launcher and is connected to "
+"the stdout and stderr streams of the server. It will contain a few log "
+"messages that occur while the server logging is being initialized and any "
+"errors or diagnostics produced by the JVM."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:252
+msgid ""
+"``server.log``: This is the main log file used by Presto. It will typically "
+"contain the relevant information if the server fails during initialization. "
+"It is automatically rotated and compressed."
+msgstr ""
+
+#: ../../src/main/sphinx/installation/deployment.rst:257
+msgid ""
+"``http-request.log``: This is the HTTP request log which contains every HTTP"
+" request received by the server. It is automatically rotated and compressed."
+msgstr ""

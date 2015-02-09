@@ -1,0 +1,186 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.70.rst:3
+msgid "Release 0.70"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:7
+msgid ""
+"This release contained a packaging error that resulted in an unusable server"
+" tarball. Do not use this release."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:11
+msgid "Views"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:13
+msgid ""
+"We have added support for creating views within Presto. Views are defined "
+"using Presto syntax but are stored (as blobs) by connectors. Currently, "
+"views are supported by the Raptor and Hive connectors. For the Hive "
+"connector, views are stored within the Hive metastore as Hive views, but "
+"they cannot be queried by Hive, nor can Hive views be queried by Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:20
+msgid ""
+"See :doc:`/sql/create-view` and :doc:`/sql/drop-view` for details and "
+"examples."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:24
+msgid "DUAL Table"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:26
+msgid ""
+"The synthetic ``DUAL`` table is no longer supported. As an alternative, "
+"please write your queries without a ``FROM`` clause or use the ``VALUES`` "
+"syntax."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:30
+msgid "Presto Verifier"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:32
+msgid ""
+"There is a new project, :doc:`/installation/verifier`, which can be used to "
+"verify a set of queries against two different clusters."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:36
+msgid "Connector Improvements"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:38
+msgid ""
+"Connectors can now add hidden columns to a table. Hidden columns are not "
+"displayed in ``DESCRIBE`` or ``information_schema``, and are not considered "
+"for ``SELECT *``.  As an example, we have added a hidden ``row_number`` "
+"column to the ``tpch`` connector."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:43
+msgid ""
+"Presto contains an extensive test suite to verify the correctness.  This "
+"test suite has been extracted into the ``presto-test`` module for use during"
+" connector development. For an example, see "
+"``TestRaptorDistributedQueries``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:48
+msgid "Machine Learning Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:50
+msgid ""
+"We have added two new machine learning functions, which can be used by "
+"advanced users familiar with LIBSVM. The functions are "
+"``learn_libsvm_classifier`` and ``learn_libsvm_regressor``. Both take a "
+"parameters string which has the form ``key=value,key=value``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:56
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:58
+msgid "New comparison functions: :func:`greatest` and :func:`least`"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:60
+msgid ""
+"New window functions: :func:`first_value`, :func:`last_value`, and "
+":func:`nth_value`"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:62
+msgid ""
+"We have added a config option to disable falling back to the interpreter "
+"when expressions fail to be compiled to bytecode. To set this option, add "
+"``compiler.interpreter-enabled=false`` to ``etc/config.properties``. This "
+"will force certain queries to fail rather than running slowly."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:67
+msgid ""
+"``DATE`` values are now implicitly coerced to ``TIMESTAMP`` and ``TIMESTAMP "
+"WITH TIME ZONE`` by setting the hour/minute/seconds to ``0`` with respect to"
+" the session timezone."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:70
+msgid ""
+"Minor performance optimization when planning queries over tables with tens "
+"of thousands of partitions or more."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:73
+msgid ""
+"Fixed a bug when planning ``ORDER BY ... LIMIT`` queries which could result "
+"in duplicate and un-ordered results under rare conditions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:76
+msgid ""
+"Reduce the size of stats collected from tasks, which dramatically reduces "
+"garbage generation and improves coordinator stability."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:79
+msgid "Fix compiler cache for expressions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:81
+msgid "Fix processing of empty or commented out statements in the CLI."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:84
+msgid "Hive Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:86
+msgid ""
+"There are two new configuration options for the Hive connector, ``hive.max-"
+"initial-split-size``, which configures the size of the initial splits, and "
+"``hive.max-initial-splits``, which configures the number of initial splits. "
+"This can be useful for speeding up small queries, which would otherwise have"
+" low parallelism."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:92
+msgid ""
+"The Hive connector will now consider all tables with a non-empty value for "
+"the table property ``presto_offline`` to be offline. The value of the "
+"property will be used in the error message."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:96
+msgid ""
+"We have added support for for ``DROP TABLE`` in the hive connector. By "
+"default, this feature is not enabled.  To enable it, set ``hive.allow-drop-"
+"table=true`` in your Hive catalog properties file."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:100
+msgid ""
+"Ignore subdirectories when generating splits (this now matches the non-"
+"recursive behavior of Hive)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.70.rst:103
+msgid "Fix handling of maps with null keys."
+msgstr ""

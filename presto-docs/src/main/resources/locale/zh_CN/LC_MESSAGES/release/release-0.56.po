@@ -1,0 +1,54 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.56.rst:3
+msgid "Release 0.56"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:6
+msgid "Table Creation"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:8
+msgid "Tables can be created from the result of a query::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:15
+msgid ""
+"Tables are created in Hive without partitions (unpartitioned) and use RCFile"
+" with the Binary SerDe (``LazyBinaryColumnarSerDe``) as this is currently "
+"the best format for Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:20
+msgid ""
+"This is a backwards incompatible change to ``ConnectorMetadata`` in the SPI,"
+" so if you have written a connector, you will need to update your code "
+"before deploying this release. We recommend changing your connector to "
+"extend from the new ``ReadOnlyConnectorMetadata`` abstract base class unless"
+" you want to support table creation."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:27
+msgid "Cross Joins"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:29
+msgid "Cross joins are supported using the standard ANSI SQL syntax::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.56.rst:35
+msgid ""
+"Inner joins that result in a cross join due to the join criteria evaluating "
+"to true at analysis time are also supported."
+msgstr ""

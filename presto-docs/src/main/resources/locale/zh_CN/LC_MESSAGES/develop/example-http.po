@@ -1,0 +1,179 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/develop/example-http.rst:3
+msgid "Example HTTP Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:5
+msgid ""
+"The Example HTTP connector has a simple goal: it reads comma-separated data "
+"over HTTP. For example, if you have a large amount of data in a CSV format, "
+"you can point the example HTTP connector at this data and write a SQL query "
+"to process it."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:11
+msgid "Code"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:13
+msgid ""
+"The Example HTTP connector can be found in the ``presto-example-http`` "
+"directory in the root of the Presto source tree."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:17
+msgid "Maven Project"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:19
+msgid ""
+"The Example HTTP connector uses Maven to build via the ``pom.xml`` file in "
+"the root of the plugin directory."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:23
+msgid "Project Dependencies"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:25
+msgid "Plugins depend on the SPI from Presto:"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:35
+msgid ""
+"The plugin uses the Maven ``provided`` scope because Presto provides the "
+"classes from the SPI at runtime and thus the plugin should not include them "
+"in the plugin assembly."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:39
+msgid ""
+"There are a few other dependencies that are provided by Presto such as "
+"``javax.inject`` and Jackson. In particular, Jackson is used for serializing"
+" handles and thus plugins must use the verison provided by Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:44
+msgid ""
+"All other dependencies are based on what the plugin needs for its own "
+"implementation. Plugins are loaded in a separate class loader to provide "
+"isolation and to allow plugins to use a different version of a library that "
+"Presto uses internally."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:50
+msgid "Plugin Implementation"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:52
+msgid ""
+"The plugin implementation in the Example HTTP connector looks very similar "
+"to other plugin implementations.  Most of the implementation is devoted to "
+"handling optional configuration and the only function of interest is the "
+"following:"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:68
+msgid "Note that the ``ImmutableList`` class is a utility class from Guava."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:70
+msgid ""
+"As with all plugins, this plugin overrides the ``getServices()`` method and "
+"returns an ``ExampleConnectorFactory`` in response to a request for a "
+"service of type ``ConnectorFactory``."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:75
+msgid "ConnectorFactory Implementation"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:77
+msgid ""
+"In Presto, the primary object that handles the connection between Presto and"
+" a particular type of data source is the ``Connector`` object, which are "
+"created using ``ConnectorFactory``."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:81
+msgid ""
+"This implementation is available in the class ``ExampleConnectorFactory``. "
+"The first thing the connector factory implementation does is specify the "
+"name of this connector. This is the same string used to reference this "
+"connector in Presto configuration."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:94
+msgid ""
+"The real work in a connector factory happens in the ``create()`` method. In "
+"the ``ExampleConnectorFactory`` class, the ``create()`` method configures "
+"the connector and then asks Guice to create the object. This is the meat of "
+"the ``create()`` method without parameter validation and exception handling:"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:117
+msgid "Connector: ExampleConnector"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:119
+msgid ""
+"This class allows Presto to obtain references to the various services "
+"provided by the connector."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:123
+msgid "Metadata: ExampleMetadata"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:125
+msgid ""
+"This class is responsible for reporting table names, table metadata, column "
+"names, column metadata and other information about the schemas that are "
+"provided by this connector. ``ConnectorMetadata`` is also called by Presto "
+"to ensure that a particular connector can understand and handle a given "
+"table name."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:131
+msgid ""
+"The ``ExampleMetadata`` implementation delegates many of these calls to "
+"``ExampleClient``, a class that implements much of the core functionality of"
+" the connector."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:136
+msgid "Split Manager: ExampleSplitManager"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:138
+msgid ""
+"The split manager partitions the data for a table into the individual chunks"
+" that Presto will distribute to workers for processing. In the case of the "
+"Example HTTP connector, each table contains one or more URIs pointing at the"
+" actual data. One split is created per URI."
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:144
+msgid "Record Set Provider: ExampleRecordSetProvider"
+msgstr ""
+
+#: ../../src/main/sphinx/develop/example-http.rst:146
+msgid ""
+"The record set provider creates a record set which in turn creates a record "
+"cursor that returns the actual data to Presto. ``ExampleRecordCursor`` reads"
+" data from a URI via HTTP. Each line corresponds to a single row. Lines are "
+"split on comma into individual field values which are then returned to "
+"Presto."
+msgstr ""

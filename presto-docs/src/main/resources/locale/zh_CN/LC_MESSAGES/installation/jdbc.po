@@ -1,0 +1,30 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/installation/jdbc.rst:3
+msgid "JDBC Driver"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/jdbc.rst:5
+msgid ""
+"Presto can be accessed from Java using the JDBC driver. Download "
+":download:`jdbc` and add it to the class path of your Java application. The "
+"following JDBC URL formats are supported:"
+msgstr ""
+
+#: ../../src/main/sphinx/installation/jdbc.rst:15
+msgid ""
+"For example, use the following URL to connect to Presto running on "
+"``example.net`` port ``8080`` with the catalog ``hive`` and the schema "
+"``sales``:"
+msgstr ""

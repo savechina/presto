@@ -1,0 +1,283 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:3
+msgid "Kafka Connector Tutorial"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:6
+msgid "Introduction"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:8
+msgid ""
+"The Kafka Connector for Presto allows access to live topic data from Apache "
+"Kafka using Presto. This tutorial shows how to set up topics and how to "
+"create the topic description files that back Presto tables."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:13
+msgid "Installation"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:15
+msgid ""
+"This tutorial assumes familiarity with Presto and a working local Presto "
+"installation (see :doc:`/installation/deployment`). It will focus on setting"
+" up Apache Kafka and integrating it with Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:20
+msgid "Step 1: Install Apache Kafka"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:22
+msgid "Download and extract `Apache Kafka <https://kafka.apache.org/>`_."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:26
+msgid ""
+"This tutorial was tested with Apache Kafka 0.8.1. It should work with any "
+"0.8.x version of Apache Kafka."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:29
+msgid "Start ZooKeeper and the Kafka server:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:44
+msgid "This will start Zookeeper on port ``2181`` and Kafka on port ``9092``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:47
+msgid "Step 2: Load data"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:49
+msgid "Download the tpch-kafka loader from Maven central:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:56
+msgid ""
+"Now run the ``kafka-tpch`` program to preload a number of topics with tpch "
+"data:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:88
+msgid ""
+"Kafka now has a number of topics that are preloaded with data to query."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:91
+msgid "Step 3: Make the Kafka topics known to Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:93
+msgid ""
+"In your Presto installation, add a catalog properties file "
+"``etc/catalog/kafka.properties`` for the Kafka connector. This file lists "
+"the Kafka nodes and topics:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:104
+msgid "Now start Presto:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:110
+msgid ""
+"Because the Kafka tables all have the ``tpch.`` prefix in the configuration,"
+" the tables are in the ``tpch`` schema. The connector is mounted into the "
+"``kafka`` catalog because the properties file is named ``kafka.properties``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:114
+msgid "Start the :doc:`Presto CLI </installation/cli>`:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:120
+msgid "List the tables to verify that things are working:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:138
+msgid "Step 4: Basic data querying"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:140
+msgid ""
+"Kafka data is unstructured and it has no metadata to describe the format of "
+"the messages. Without further configuration, the Kafka connector can access "
+"the data and map it in raw form but there are no actual columns besides the "
+"built-in ones:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:184
+msgid ""
+"The data from Kafka can be queried using Presto but it is not yet in actual "
+"table shape. The raw data is available through the ``_message`` and ``_key``"
+" columns but it is not decoded into columns. As the sample data is in JSON "
+"format, the :doc:`/functions/json` built into Presto can be used to slice "
+"the data."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:191
+msgid "Step 5: Add a topic decription file"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:193
+msgid ""
+"The Kafka connector supports topic description files to turn raw data into "
+"table format. These files are located in the ``etc/kafka`` folder in the "
+"Presto installation and must end with ``.json``. It is recommended that the "
+"file name matches the table name but this is not necessary."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:198
+msgid ""
+"Add the following file as ``etc/kafka/tpch.customer.json`` and restart "
+"Presto:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:219
+msgid "The customer table now has an additional column: ``kafka_key``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:255
+msgid ""
+"The topic definition file maps the internal Kafka key (which is a raw long "
+"in eight bytes) onto a Presto ``BIGINT`` column."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:259
+msgid "Step 6: Map all the values from the topic message onto columns"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:261
+msgid ""
+"Update the ``etc/kafka/tpch.customer.json`` file to add fields for the "
+"message and restart Presto. As the fields in the message are JSON, it uses "
+"the ``json`` data format. This is an example where different data formats "
+"are used for the key and the message."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:335
+msgid ""
+"Now for all the fields in the JSON of the message, columns are defined and "
+"the sum query from earlier can operate on the ``account_balance`` column "
+"directly:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:382
+msgid ""
+"Now all the fields from the ``customer`` topic messages are available as "
+"Presto table columns."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:386
+msgid "Step 7: Use live data"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:388
+msgid ""
+"Presto can query live data in Kafka as it arrives. To simulate a live feed "
+"of data, this tutorial sets up a feed of live tweets into Kafka."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:392
+msgid "Setup a live Twitter feed"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:394
+msgid "Download the twistr tool"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:401
+msgid ""
+"Create a developer account at https://dev.twitter.com/ and set up an access "
+"and consumer token."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:404
+msgid ""
+"Create a ``twistr.properties`` file and put the access and consumer key and "
+"secrets into it:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:416
+msgid "Create a tweets table on Presto"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:418
+msgid "Add the tweets table to the ``etc/catalog/kafka.properties`` file:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:427
+msgid ""
+"Add a topic definition file for the Twitter feed as "
+"``etc/kafka/tweets.json``:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:504
+msgid ""
+"As this table does not have an explicit schema name, it will be placed into "
+"the ``default`` schema."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:508
+msgid "Feed live data"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:510
+msgid "Start the twistr tool:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:516
+msgid ""
+"``twistr`` connects to the Twitter API and feeds the \"sample tweet\" feed "
+"into a Kafka topic called ``twitter_feed``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:519
+msgid "Now run queries against live data:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:558
+msgid "There is now a live feed into Kafka which can be queried using Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:561
+msgid "Epilogue: Time stamps"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:563
+msgid ""
+"The tweets feed that was set up in the last step contains a time stamp in "
+"RFC 2822 format as ``created_at`` attribute in each tweet."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:579
+msgid ""
+"The topic definition file for the tweets table contains a mapping onto a "
+"timestamp using the ``rfc2822`` converter:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:593
+msgid "This allows the raw data to be mapped onto a Presto timestamp column:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka-tutorial.rst:610
+msgid ""
+"The Kafka connector contains converters for ISO 8601, RFC 2822 text formats "
+"and for number-based timestamps using seconds or miilliseconds since the "
+"epoch. There is also a generic, text-based formatter which uses Joda-Time "
+"format strings to parse text columns."
+msgstr ""

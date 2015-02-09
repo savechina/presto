@@ -1,0 +1,195 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/aggregate.rst:3
+msgid "Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:5
+msgid ""
+"Aggregate functions operate on a set of values to compute a single result."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:7
+msgid ""
+"Except for :func:`count`, :func:`count_if`, :func:`max_by` and "
+":func:`approx_distinct`, all of these aggregate functions ignore null values"
+" and return null for no input rows or when all values are null. For example,"
+" :func:`sum` returns null rather than zero and :func:`avg` does include null"
+" values in the count. The ``coalesce`` function can be used to convert null "
+"into zero."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:14
+msgid "General Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:18
+msgid "Returns an arbitrary non-null value of ``x``, if one exists."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:22
+msgid "Returns the average (arithmetic mean) of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:26
+msgid ""
+"Returns ``TRUE`` if every input value is ``TRUE``, otherwise ``FALSE``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:30
+msgid "Returns ``TRUE`` if any input value is ``TRUE``, otherwise ``FALSE``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:34
+msgid "Returns the number of input rows."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:38
+msgid "Returns the number of non-null input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:42
+msgid ""
+"Returns the number of ``TRUE`` input values. This function is equivalent to "
+"``count(CASE WHEN x THEN 1 END)``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:47
+msgid "This is an alias for :func:`bool_and`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:51
+msgid ""
+"Returns the value of ``x`` associated with the maximum value of ``y`` over "
+"all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:55
+msgid ""
+"Returns the value of ``x`` associated with the minimum value of ``y`` over "
+"all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:59
+msgid "Returns the maximum value of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:63
+msgid "Returns the minimum value of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:67
+msgid "Returns the sum of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:70
+msgid "Map Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:74
+msgid "Returns a map created from the input ``key`` / ``value`` pairs."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:77
+msgid "Approximate Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:81
+#: ../../src/main/sphinx/functions/aggregate.rst:92
+msgid ""
+"Returns the approximate number of distinct input values. This function "
+"provides an approximation of ``count(DISTINCT x)``. Zero is returned if all "
+"input values are null."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:85
+msgid ""
+"This function should produce a standard error of 2.3%, which is the standard"
+" deviation of the (approximately normal) error distribution over all "
+"possible sets. It does not guarantee an upper bound on the error for any "
+"specific input set."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:96
+msgid ""
+"This function should produce a standard error of no more than ``e``, which "
+"is the standard deviation of the (approximately normal) error distribution "
+"over all possible sets. It does not guarantee an upper bound on the error "
+"for any specific input set. The current implementation of this function "
+"requires that ``e`` be in the range: [0.01150, 0.26000]."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:104
+msgid ""
+"Returns the approximate percentile for all input values of ``x`` at the "
+"percentage ``p``. The value of ``p`` must be between zero and one and must "
+"be constant for all input rows."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:110
+msgid ""
+"Returns the approximate weighed percentile for all input values of ``x`` "
+"using the per-item weight ``w`` at the percentage ``p``. The weight must be "
+"an integer value of at least one. It is effectively a replication count for "
+"the value ``x`` in the percentile set. The value of ``p`` must be between "
+"zero and one and must be constant for all input rows."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:118
+msgid ""
+"Computes an approximate histogram with up to ``buckets`` number of buckets "
+"for all ``value``\\ s with a per-item weight of ``weight``. The algorithm is"
+" based loosely on:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:127
+msgid ""
+"``buckets`` must be a ``bigint``. ``value`` and ``weight`` must be numeric."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:131
+msgid ""
+"Computes an approximate histogram with up to ``buckets`` number of buckets "
+"for all ``value``\\ s. This function is equivalent to the variant of "
+":func:`numeric_histogram` that takes a ``weight``, with a per-item weight of"
+" ``1``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:136
+msgid "Statistical Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:140
+msgid "This is an alias for :func:`stddev_samp`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:144
+msgid "Returns the population standard deviation of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:148
+msgid "Returns the sample standard deviation of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:152
+msgid "This is an alias for :func:`var_samp`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:156
+msgid "Returns the population variance of all input values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/aggregate.rst:160
+msgid "Returns the sample variance of all input values."
+msgstr ""

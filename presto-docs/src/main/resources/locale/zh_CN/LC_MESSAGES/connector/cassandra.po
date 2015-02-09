@@ -1,0 +1,328 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/connector/cassandra.rst:3
+msgid "Cassandra Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:5
+msgid "The Cassandra connector allows querying data stored in Cassandra."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:8
+msgid "Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:10
+msgid ""
+"To configure the Cassandra connector, create a catalog properties file "
+"``etc/catalog/cassandra.properties`` with the following contents, replacing "
+"``host1,host2`` with a comma-separated list of the Cassandra nodes used to "
+"discovery the cluster topology:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:20
+msgid ""
+"You will also need to set ``cassandra.native-protocol-port`` if your "
+"Cassandra nodes are not using the default port (9042)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:24
+msgid "Multiple Cassandra Clusters"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:26
+msgid ""
+"You can have as many catalogs as you need, so if you have additional "
+"Cassandra clusters, simply add another properties file to ``etc/catalog`` "
+"with a different name (making sure it ends in ``.properties``). For example,"
+" if you name the property file ``sales.properties``, Presto will create a "
+"catalog named ``sales`` using the configured connector."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:33
+msgid "Configuration Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:35
+msgid "The following configuration properties are available:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:38
+#: ../../src/main/sphinx/connector/cassandra.rst:90
+msgid "Property Name"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:38
+#: ../../src/main/sphinx/connector/cassandra.rst:90
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:40
+msgid "``cassandra.contact-points``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:40
+msgid ""
+"Comma-separated list of hosts in a Cassandra cluster. The Cassandra driver "
+"will use these contact points to discover cluster topology. At least one "
+"Cassandra host is required."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:44
+msgid "``cassandra.native-protocol-port``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:44
+msgid ""
+"The Cassandra server port running the native client protocol (defaults to "
+"``9042``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:47
+msgid "``cassandra.thrift-port``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:47
+msgid ""
+"The Cassandra server port running the Thrift client protocol (defaults to "
+"``9160``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:50
+msgid "``cassandra.limit-for-partition-key-select``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:50
+msgid ""
+"Limit of rows to read for finding all partition keys. If a Cassandra table "
+"has more rows than this value, splits based on token ranges are used "
+"instead. Note that for larger values you may need to adjust read timeout for"
+" Cassandra."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:55
+msgid "``cassandra.max-schema-refresh-threads``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:55
+msgid ""
+"Maximum number of schema cache refresh threads. This property corresponds to"
+" the maximum number of parallel requests."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:58
+msgid "``cassandra.schema-cache-ttl``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:58
+msgid ""
+"Maximum time that information about a schema will be cached (defaults to "
+"``1h``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:61
+msgid "``cassandra.schema-refresh-interval``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:61
+msgid ""
+"The schema information cache will be refreshed in the background when "
+"accessed if the cached data is at least this old (defaults to ``2m``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:65
+msgid "``cassandra.consistency-level``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:65
+msgid ""
+"Consistency levels in Cassandra refer to the level of consistency to be used"
+" for both read and write operations.  More information about consistency "
+"levels can be found in the `Cassandra consistency`_ documentation. This "
+"property defaults to a consistency level of ``ONE``. Possible values include"
+" ``ALL``, ``EACH_QUORUM``, ``QUORUM``, ``LOCAL_QUORUM``, ``ONE``, ``TWO``, "
+"``THREE``, ``LOCAL_ONE``, ``ANY``, ``SERIAL``, ``LOCAL_SERIAL``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:73
+msgid "``cassandra.allow-drop-table``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:73
+msgid ""
+"Set to ``true`` to allow dropping Cassandra tables from Presto via "
+":doc:`/sql/drop-table` (defaults to ``false``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:76
+msgid "``cassandra.username``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:76
+msgid ""
+"Username used for authentication to the Cassandra cluster. This is a global "
+"setting used for all connections, regardless of the user who is connected to"
+" Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:80
+msgid "``cassandra.password``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:80
+msgid ""
+"Password used for authentication to the Cassandra cluster. This is a global "
+"setting used for all connections, regardless of the user who is connected to"
+" Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:87
+msgid "The following advanced configuration properties are available:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:92
+msgid "``cassandra.fetch-size``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:92
+msgid "Number of rows fetched at a time in a Cassandra query."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:94
+msgid "``cassandra.fetch-size-for-partition-key-select``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:94
+msgid ""
+"Number of rows fetched at a time in a Cassandra query that selects partition"
+" keys."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:97
+msgid "``cassandra.partition-size-for-batch-select``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:97
+msgid ""
+"Number of partitions batched together into a single select for a single "
+"partion key column table."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:100
+msgid "``cassandra.split-size``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:100
+msgid "Number of keys per split when querying Cassandra."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:102
+msgid "``cassandra.partitioner``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:102
+msgid ""
+"Partitioner to use for hashing and data distribution. This property defaults"
+" to ``Murmur3Partitioner``. The other supported values are "
+"``RandomPartitioner`` and ``ByteOrderedPartitioner``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:106
+msgid "``cassandra.thrift-connection-factory-class``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:106
+msgid ""
+"Allows for the specification of a custom implementation of "
+"``org.apache.cassandra.thrift.ITransportFactory`` to be used to connect to "
+"Cassandra using the Thrift protocol."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:110
+msgid "``cassandra.transport-factory-options``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:110
+msgid ""
+"Allows for the specification of arbitrary options to be passed to the Thrift"
+" connection factory."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:113
+msgid "``cassandra.client.read-timeout``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:113
+msgid ""
+"Maximum time the Cassandra driver will wait for an answer to a query from "
+"one Cassandra node. Note that the underlying Cassandra driver may retry a "
+"query against more than one node in the event of a read timeout. Increasing "
+"this may help with queries that use an index."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:119
+msgid "``cassandra.client.connect-timeout``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:119
+msgid ""
+"Maximum time the Cassandra driver will wait to establish a connection to a "
+"Cassandra node. Increasing this may help with heavily loaded Cassandra "
+"clusters."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:123
+msgid "``cassandra.client.so-linger``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:123
+msgid ""
+"Number of seconds to linger on close if unsent data is queued. If set to "
+"zero, the socket will be closed immediately. When this option is non-zero, a"
+" socket will linger that many seconds for an acknowledgement that all data "
+"was written to a peer. This option can be used to avoid consuming sockets on"
+" a Cassandra server by immediately closing connections when they are no "
+"longer needed."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:131
+msgid "``cassandra.retry-policy``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:131
+msgid ""
+"Policy used to retry failed requests to Cassandra. This property defaults to"
+" ``DEFAULT``. Using ``BACKOFF`` may help when queries fail with *\"not "
+"enough replicas\"*. The other possible values are "
+"``DOWNGRADING_CONSISTENCY`` and ``FALLTHROUGH``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:138
+msgid "Querying Cassandra Tables"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:140
+msgid ""
+"The ``users`` table is an example Cassandra table from the Cassandra "
+"`Getting Started`_ guide. It can be created along with the ``mykeyspace`` "
+"keyspace using Cassandra's cqlsh (CQL interactive terminal):"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:157
+msgid "This table can be described in Presto::"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/cassandra.rst:170
+msgid "This table can then be queried in Presto::"
+msgstr ""

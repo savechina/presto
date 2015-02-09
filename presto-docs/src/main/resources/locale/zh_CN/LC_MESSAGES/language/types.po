@@ -1,0 +1,200 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/language/types.rst:3
+msgid "Data Types"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:5
+msgid ""
+"Presto currently supports a limited set of data types. These types can be "
+"used with the standard ``CAST`` operator."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:9
+msgid "BOOLEAN"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:11
+msgid "This type captures boolean values ``true`` and ``false``."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:14
+msgid "BIGINT"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:16
+msgid ""
+"A 64-bit signed two's complement integer with a minimum value of ``-2^63`` "
+"and a maximum value of ``2^63 - 1``."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:20
+msgid "DOUBLE"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:22
+msgid ""
+"A double is a 64-bit inexact, variable-precision implementing the IEEE "
+"Standard 754 for Binary Floating-Point Arithmetic."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:26
+msgid "VARCHAR"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:28
+msgid "Variable length character data."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:31
+msgid "VARBINARY"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:33
+msgid "Variable length binary data."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:36
+msgid "JSON"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:38
+msgid "Variable length json data."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:41
+msgid "DATE"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:43
+msgid "Calendar date (year, month, day)."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:45
+msgid "Example: ``DATE '2001-08-22'``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:48
+msgid "TIME"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:50
+msgid ""
+"Time of day (hour, minute, second, millisecond) without a time zone. Values "
+"of this type are parsed and rendered in the session time zone."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:53
+msgid "Example: ``TIME '01:02:03.456'``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:56
+msgid "TIME WITH TIME ZONE"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:58
+msgid ""
+"Time of day (hour, minute, second, millisecond) with a time zone. Values of "
+"this type are rendered using the time zone from the value."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:61
+msgid "Example: ``TIME '01:02:03.456 America/Los_Angeles'``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:64
+msgid "TIMESTAMP"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:66
+msgid ""
+"Instant in time that includes the date and time of day without a time zone. "
+"Values of this type are parsed and rendered in the session time zone."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:69
+msgid "Example: ``TIMESTAMP '2001-08-22 03:04:05.321'``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:72
+msgid "TIMESTAMP WITH TIME ZONE"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:74
+msgid ""
+"Instant in time that includes the date and time of day with a time zone. "
+"Values of this type are rendered using the time zone from the value."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:77
+msgid "Example: ``TIMESTAMP '2001-08-22 03:04:05.321 America/Los_Angeles'``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:80
+msgid "INTERVAL YEAR TO MONTH"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:82
+msgid "Span of years and months."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:84
+msgid "Example: ``INTERVAL '3' MONTH``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:87
+msgid "INTERVAL DAY TO SECOND"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:89
+msgid "Span of days, hours, minutes, seconds and milliseconds."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:91
+msgid "Example: ``INTERVAL '2' DAY``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:96
+msgid "ARRAY"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:98
+msgid "An array of the given component type."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:100
+msgid "Example: ``ARRAY[1, 2, 3]``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:105
+msgid "MAP"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:107
+msgid "A map between the given component types."
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:112
+msgid "ROW"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:114
+msgid ""
+"A structure made up of named fields. The fields may be of any SQL type, and "
+"are accessed with field reference operator ``.``"
+msgstr ""
+
+#: ../../src/main/sphinx/language/types.rst:117
+msgid "Example: ``my_column.my_field``"
+msgstr ""

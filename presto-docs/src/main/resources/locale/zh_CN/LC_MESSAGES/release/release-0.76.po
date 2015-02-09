@@ -1,0 +1,150 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.76.rst:3
+msgid "Release 0.76"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:6
+msgid "Kafka Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:8
+msgid ""
+"This release adds a connector that allows querying of `Apache Kafka`_ topic "
+"data from Presto. Topics can be live and repeated queries will pick up new "
+"data."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:11
+msgid ""
+"Apache Kafka 0.8+ is supported although Apache Kafka 0.8.1+ is recommended. "
+"There is extensive :doc:`documentation </connector/kafka>` about configuring"
+" the connector and a :doc:`tutorial </connector/kafka-tutorial>` to get "
+"started."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:18
+msgid "MySQL and PostgreSQL Connectors"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:20
+msgid ""
+"This release adds the :doc:`/connector/mysql` and "
+":doc:`/connector/postgresql` for querying and creating tables in external "
+"relational databases. These can be used to join or copy data between "
+"different systems like MySQL and Hive, or between two different MySQL or "
+"PostgreSQL instances, or any combination."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:26
+msgid "Cassandra Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:28
+msgid ""
+"The :doc:`/connector/cassandra` configuration properties ``cassandra.client"
+".read-timeout`` and ``cassandra.client.connect-timeout`` are now specified "
+"using a duration rather than milliseconds (this makes them consistent with "
+"all other such properties in Presto). If you were previously specifying a "
+"value such as ``25``, change it to ``25ms``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:34
+msgid ""
+"The retry policy for the Cassandra client is now configurable via the "
+"``cassandra.retry-policy`` property. In particular, the custom ``BACKOFF`` "
+"retry policy may be useful."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:39
+msgid "Hive Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:41
+msgid ""
+"The new :doc:`/connector/hive` configuration property ``hive.s3.socket-"
+"timeout`` allows changing the socket timeout for queries that read or write "
+"to Amazon S3. Additionally, the previously added ``hive.s3.max-connections``"
+" property was not respected and always used the default of ``500``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:46
+msgid ""
+"Hive allows the partitions in a table to have a different schema than the "
+"table. In particular, it allows changing the type of a column without "
+"changing the column type of existing partitions. The Hive connector does not"
+" support this and could previously return garbage data for partitions stored"
+" using the RCFile Text format if the column type was converted from a non-"
+"numeric type such as ``STRING`` to a numeric type such as ``BIGINT`` and the"
+" actual data in existing partitions was not numeric. The Hive connector now "
+"detects this scenario and fails the query after the partition metadata has "
+"been read."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:56
+msgid ""
+"The property ``hive.storage-format`` is broken and has been disabled. It "
+"sets the storage format on the metadata but always writes the table using "
+"``RCBINARY``. This will be implemented in a future release."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:61
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:63
+msgid "Fix hang in verifier when an exception occurs."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:64
+msgid ""
+"Fix :func:`chr` function to work with Unicode code points instead of ASCII "
+"code points."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:65
+msgid ""
+"The JDBC driver no longer hangs the JVM on shutdown (all threads are daemon "
+"threads)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:66
+msgid "Fix incorrect parsing of function arguments."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:67
+msgid ""
+"The bytecode compiler now caches generated code for join and group "
+"byqueries, which should improve performance and CPU efficiency for these "
+"types of queries."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:69
+msgid ""
+"Improve planning performance for certain trivial queries over tables with "
+"lots of partitions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:70
+msgid ""
+"Avoid creating large output pages. This should mitigate some cases of "
+"*\"Remote page is too large\"* errors."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.76.rst:72
+msgid ""
+"The coordinator/worker communication layer is now fully asynchronous. "
+"Specifically, long-poll requests no longer tie up a thread on the worker. "
+"This makes heavily loaded clusters more efficient."
+msgstr ""

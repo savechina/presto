@@ -1,0 +1,71 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.54.rst:3
+msgid "Release 0.54"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:5
+msgid ""
+"Restore binding for the node resource on the coordinator, which provides the"
+" state of all nodes as seen by the coordinator's failure detector. Access "
+"``/v1/node`` to see all nodes, or ``/v1/node/failed`` to see failed nodes."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:9
+msgid ""
+"Prevent the :doc:`/installation/cli` from hanging when the server goes away."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:11
+msgid "Add Hive connector ``hive-hadoop1`` for Apache Hadoop 1.x."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:13
+msgid ""
+"Add support for Snappy and LZ4 compression codecs for the ``hive-cdh4`` "
+"connector."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:15
+msgid ""
+"Add Example HTTP connector ``example-http`` that reads CSV data via HTTP. "
+"The connector requires a metadata URI that returns a JSON document "
+"describing the table metadata and the CSV files to read."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:19
+msgid ""
+"Its primary purpose is to serve as an example of how to write a connector, "
+"but it can also be used directly. Create ``etc/catalog/example.properties`` "
+"with the following contents to mount the ``example-http`` connector as the "
+"``example`` catalog:"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:29
+msgid "Show correct error message when a catalog or schema does not exist."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:31
+msgid "Verify JVM requirements on startup."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:33
+msgid "Log an error when the JVM code cache is full."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.54.rst:35
+msgid ""
+"Upgrade the embedded Discovery server to allow using non-UUID values for the"
+" ``node.id`` property."
+msgstr ""

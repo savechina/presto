@@ -1,0 +1,187 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.80.rst:3
+msgid "Release 0.80"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:6
+msgid "New Hive ORC Reader"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:8
+msgid ""
+"We have added a new ORC reader implementation. The new reader supports "
+"vectorized reads, lazy loading, and predicate push down, all of which make "
+"the reader more efficient and typically reduces wall clock time for a query."
+" Although the new reader has been heavily tested, it is an extensive rewrite"
+" of the Apache Hive ORC reader, and may have some latent issues. If you are "
+"seeing issues, you can disable the new reader on a per-query basis by "
+"setting the ``<hive-catalog>.optimized_reader_enabled`` session property, or"
+" you can disable the reader by default by setting the Hive catalog property "
+"``hive.optimized-reader.enabled=false``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:19
+msgid "Hive Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:21
+msgid ""
+"The maximum retry time for the Hive S3 file system can be configured by "
+"setting ``hive.s3.max-retry-time``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:23
+msgid ""
+"Fix Hive partition pruning for null keys (i.e. "
+"``__HIVE_DEFAULT_PARTITION__``)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:26
+msgid "Cassandra Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:28
+msgid "Update Cassandra driver to 2.1.0."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:29
+msgid "Map Cassandra ``TIMESTAMP`` type to Presto ``TIMESTAMP`` type."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:32
+msgid "\"Big Query\" Support"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:34
+msgid ""
+"We've added experimental support for \"big\" queries. This provides a "
+"separate queue controlled by the following properties:"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:37
+msgid "``experimental.max-concurrent-big-queries``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:38
+msgid "``experimental.max-queued-big-queries``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:40
+msgid ""
+"There are separate configuration options for queries that are submitted with"
+" the ``experimental_big_query`` session property:"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:43
+msgid "``experimental.big-query-initial-hash-partitions``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:44
+msgid "``experimental.big-query-max-task-memory``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:46
+msgid ""
+"Queries submitted with this property will use hash distribution for all "
+"joins."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:49
+msgid "Metadata-Only Query Optimization"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:51
+msgid ""
+"We now support an optimization that rewrites aggregation queries that are "
+"insensitive to the cardinality of the input (e.g., :func:`max`, :func:`min`,"
+" ``DISTINCT`` aggregates) to execute against table metadata."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:55
+msgid ""
+"For example, if ``key``, ``key1`` and ``key2`` are partition keys, the "
+"following queries will benefit::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:70
+msgid ""
+"This optimization is turned off by default. To turn it on, add ``optimizer"
+".optimize-metadata-queries=true`` to the coordinator config properties."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:75
+msgid ""
+"This optimization will cause queries to produce incorrect results if the "
+"connector allows partitions to contain no data. For example, the Hive "
+"connector will produce incorrect results if your Hive warehouse contains "
+"partitions without data."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:81
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:83
+msgid "Add support implicit joins. The following syntax is now allowed::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:87
+msgid ""
+"Add property ``task.verbose-stats`` to enable verbose statistics collection "
+"for tasks. The default is ``false``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:89
+msgid "Format binary data in the CLI as a hex dump."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:90
+msgid "Add approximate numeric histogram function :func:`numeric_histogram`."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:91
+msgid "Add :func:`array_sort` function."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:92
+msgid "Add :func:`map_keys` and :func:`map_values` functions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:93
+msgid "Make :func:`row_number` completely streaming."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:94
+msgid ""
+"Add property ``task.max-partial-aggregation-memory`` to configure the memory"
+" limit for the partial step of aggregations."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:96
+msgid ""
+"Fix exception when processing queries with an ``UNNEST`` operation where the"
+" output was not used."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:97
+msgid ""
+"Only show query progress in UI after the query has been fully scheduled."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.80.rst:98
+msgid ""
+"Add query execution visualization to the coordinator UI. It can be accessed "
+"via the query details page."
+msgstr ""

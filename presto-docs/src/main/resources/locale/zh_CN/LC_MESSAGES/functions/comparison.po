@@ -1,0 +1,257 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/comparison.rst:3
+msgid "Comparison Functions and Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:6
+msgid "Comparison Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:9
+msgid "Operator"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:11
+msgid "``<``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:11
+msgid "Less than"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:12
+msgid "``>``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:12
+msgid "Greater than"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:13
+msgid "``<=``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:13
+msgid "Less than or equal to"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:14
+msgid "``>=``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:14
+msgid "Greater than or equal to"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:15
+msgid "``=``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:15
+msgid "Equal"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:16
+msgid "``<>``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:16
+msgid "Not equal"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:17
+msgid "``!=``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:17
+msgid "Not equal (non-standard but popular syntax)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:21
+msgid "Range Operator: BETWEEN"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:23
+msgid ""
+"The ``BETWEEN`` operator tests if a value is within a specified range. It "
+"uses the syntax ``value BETWEEN min AND max``::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:28
+#: ../../src/main/sphinx/functions/comparison.rst:37
+msgid "The statement shown above is equivalent to the following statement::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:32
+msgid ""
+"To test if a value does not fall within the specified range use ``NOT "
+"BETWEEN``::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:41
+msgid ""
+"The presence of NULL in a ``BETWEEN`` or ``NOT BETWEEN`` statement will "
+"result in the statement evaluating to NULL::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:48
+msgid ""
+"The ``BETWEEN`` and ``NOT BETWEEN`` operators can also be used to evaluate "
+"string arguments::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:53
+msgid ""
+"Not that the value, min, and max parameters to ``BETWEEN`` and ``NOT "
+"BETWEEN`` must be the same type.  For example, Presto will produce an error "
+"if you ask it if John is between 2.3 and 35.2."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:58
+msgid "IS NULL and IS NOT NULL"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:59
+msgid ""
+"The ``IS NULL`` and ``IS NOT NULL`` operators test whether a value is null "
+"(undefined).  Both operators work for all data types."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:62
+msgid "Using ``NULL`` with ``IS NULL`` evaluates to true::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:66
+msgid "But any other constant does not::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:71
+msgid "IS DISTINCT FROM and IS NOT DISTINCT FROM"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:73
+msgid ""
+"In SQL a ``NULL`` value signifies an unknown value, so any comparison "
+"involving a ``NULL`` will produce ``NULL``.  The  ``IS DISTINCT FROM`` and "
+"``IS NOT DISTINCT FROM`` operators treat ``NULL`` as a known value and both "
+"operators guarantee either a true or false outcome even in the presence of "
+"``NULL`` input::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:83
+msgid ""
+"In the example shown above, a ``NULL`` value is not considered distinct from"
+" ``NULL``.  When you are comparing values which may include ``NULL`` use "
+"these operators to guarantee either a ``TRUE`` or ``FALSE`` result."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:88
+msgid ""
+"The following truth table demonstrate the handling of ``NULL`` in ``IS "
+"DISTINCT FROM`` and ``IS NOT DISTINCT FROM``:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "a"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "b"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "a = a"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "a <> b"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "a DISTINCT b"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:92
+msgid "a NOT DISTINCT b"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:95
+#: ../../src/main/sphinx/functions/comparison.rst:96
+msgid "``1``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:95
+#: ../../src/main/sphinx/functions/comparison.rst:95
+#: ../../src/main/sphinx/functions/comparison.rst:96
+#: ../../src/main/sphinx/functions/comparison.rst:97
+msgid "``TRUE``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:94
+#: ../../src/main/sphinx/functions/comparison.rst:95
+#: ../../src/main/sphinx/functions/comparison.rst:95
+#: ../../src/main/sphinx/functions/comparison.rst:96
+#: ../../src/main/sphinx/functions/comparison.rst:97
+msgid "``FALSE``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:95
+msgid "``2``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:96
+#: ../../src/main/sphinx/functions/comparison.rst:96
+#: ../../src/main/sphinx/functions/comparison.rst:96
+#: ../../src/main/sphinx/functions/comparison.rst:97
+#: ../../src/main/sphinx/functions/comparison.rst:97
+#: ../../src/main/sphinx/functions/comparison.rst:97
+#: ../../src/main/sphinx/functions/comparison.rst:97
+msgid "``NULL``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:101
+msgid "GREATEST and LEAST"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:103
+msgid ""
+"These functions are not in the SQL standard, but are a common extension. "
+"Like most other functions in Presto, they return null if any argument is "
+"null. Note that in some other databases, such as PostgreSQL, they only "
+"return null if all arguments are null."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:108
+msgid ""
+"The following types are supported: ``DOUBLE``, ``BIGINT``, ``VARCHAR``, "
+"``TIMESTAMP``, ``TIMESTAMP WITH TIME ZONE``, ``DATE``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:118
+msgid "Returns the largest of the provided values."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/comparison.rst:122
+msgid "Returns the smallest of the provided values."
+msgstr ""

@@ -1,0 +1,124 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.61.rst:3
+msgid "Release 0.61"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:6
+msgid "Add support for Table Value Constructors"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:8
+msgid ""
+"Presto now supports the SQL table value constructor syntax to create inline "
+"tables. The ``VALUES`` clause can be used anywhere a ``SELECT`` statement is"
+" allowed. For example, as a top-level query::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:22
+msgid "Alternatively, in the ``FROM`` clause::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:47
+msgid "Cassandra"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:49
+msgid "Add support for upper-case schema, table, and columns names."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:51
+msgid "Add support for ``DECIMAL`` type."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:54
+msgid "Amazon S3 support"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:56
+msgid ""
+"Completely rewritten Hadoop FileSystem implementation for S3 using the "
+"Amazon AWS SDK, with major performance and reliability improvements."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:59
+msgid "Add support for writing data to S3."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:62
+msgid "Approximate Aggregation Queries"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:64
+msgid ""
+"We have added experimental support for aggregate queries that return "
+"approximate results with error bounds. This feature is designed to be used "
+"with sampled tables generated using the ``TABLESAMPLE POISSONIZED "
+"RESCALED``. For example, the following query will create a 1% sample::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:73
+msgid "Then, to run an approximate query::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:88
+msgid ""
+"To enable this feature you must add ``analyzer.experimental-syntax-"
+"enabled=true`` to your config."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:92
+msgid ""
+"The syntax and functionality for approximate queries is experimental and "
+"will likely change in future versions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:97
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:99
+msgid ""
+"General improvements to the JDBC driver, specifically with respect to "
+"metadata handling."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:101
+msgid ""
+"Fix division by zero errors in variance aggregation functions (``VARIANCE``,"
+" ``STDDEV``, etc.)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:103
+msgid ""
+"Fix a bug when using ``DISTINCT`` aggregations in the ``HAVING`` clause."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:105
+msgid "Fix an out of memory issue when writing large tables."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:107
+msgid "Fix a bug when using ``ORDER BY rand()`` in a ``JOIN`` query."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:109
+msgid "Fix handling of timestamps in maps and lists in Hive connector."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.61.rst:111
+msgid ""
+"Add instrumentation for Hive metastore and HDFS API calls to track failures "
+"and latency. These metrics are exposed via JMX."
+msgstr ""

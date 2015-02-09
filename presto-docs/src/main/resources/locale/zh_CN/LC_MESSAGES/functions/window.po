@@ -1,0 +1,161 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/window.rst:3
+msgid "Window Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:5
+msgid ""
+"Window functions perform calculations across rows of the query result. They "
+"run after the ``HAVING`` clause but before the ``ORDER BY`` clause. Invoking"
+" a window function requires special syntax using the ``OVER`` clause to "
+"specify the window. A window has three components:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:10
+msgid ""
+"The partition specification, which separates the input rows into different "
+"partitions. This is analogous to how the ``GROUP BY`` clause separates rows "
+"into different groups for aggregate functions."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:13
+msgid ""
+"The ordering specification, which determines the order in which input rows "
+"will be processed by the window function."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:15
+msgid ""
+"The window frame, which specifies a sliding window of rows to be processed "
+"by the function for a given row. If the frame is not specified, it defaults "
+"to ``RANGE UNBOUNDED PRECEDING``, which is the same as ``RANGE BETWEEN "
+"UNBOUNDED PRECEDING AND CURRENT ROW``. This frame contains all rows from the"
+" start of the partition up to the last peer of the current row."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:21
+msgid ""
+"For example, the following query ranks orders for each clerk by price::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:30
+msgid "Aggregate Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:32
+msgid ""
+"All :doc:`aggregate` can be used as window functions by adding the ``OVER`` "
+"clause. The aggregate function is computed for each row over the rows within"
+" the current row's window frame."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:36
+msgid ""
+"For example, the following query produces a rolling sum of order prices by "
+"day for each clerk::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:46
+msgid "Ranking Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:50
+msgid ""
+"Returns the cumulative distribution of a value in a group of values. The "
+"result is the number of rows preceding or peer with the row in the window "
+"ordering of the window partition divided by the total number of rows in the "
+"window partition. Thus, any tie values in the ordering will evaluate to the "
+"same distribution value."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:58
+msgid ""
+"Returns the rank of a value in a group of values. This is similar to "
+":func:`rank`, except that tie values do not produce gaps in the sequence."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:63
+msgid ""
+"Divides the rows for each window partition into ``n`` buckets ranging from "
+"``1`` to at most ``n``. Bucket values will differ by at most ``1``. If the "
+"number of rows in the partition does not divide evenly into the number of "
+"buckets, then the remainder values are distributed one per bucket, starting "
+"with the first bucket."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:69
+msgid ""
+"For example, with ``6`` rows and ``4`` buckets, the bucket values would be "
+"as follows: ``1`` ``1`` ``2`` ``2`` ``3`` ``4``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:74
+msgid ""
+"Returns the percentage ranking of a value in group of values. The result is "
+"``(r - 1) / (n - 1)`` where ``r`` is the :func:`rank` of the row and ``n`` "
+"is the total number of rows in the window partition."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:80
+msgid ""
+"Returns the rank of a value in a group of values. The rank is one plus the "
+"number of rows preceding the row that are not peer with the row. Thus, tie "
+"values in the ordering will produce gaps in the sequence. The ranking is "
+"performed for each window partition."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:87
+msgid ""
+"Returns a unique, sequential number for each row, starting with one, "
+"according to the ordering of rows within the window partition."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:91
+msgid "Value Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:95
+msgid "Returns the first value of the window."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:99
+msgid "Returns the last value of the window."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:103
+msgid ""
+"Returns the value at the specified offset from beginning the window. Offsets"
+" start at ``1``. The offset can be any scalar expression.  If the offset is "
+"null or greater than the number of values in the window, null is returned.  "
+"It is an error for the offset to be zero or negative."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:111
+msgid ""
+"Returns the value at ``offset`` rows after the current row in the window. "
+"Offsets start at ``0``, which is the current row. The offset can be any "
+"scalar expression.  The default ``offset`` is ``1``. If the offset is null "
+"or larger than the window, the ``default_value`` is returned, or if it is "
+"not specified ``null`` is returned."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/window.rst:119
+msgid ""
+"Returns the value at ``offset`` rows before the current row in the window "
+"Offsets start at ``0``, which is the current row.  The offset can be any "
+"scalar expression.  The default ``offset`` is ``1``. If the offset is null "
+"or larger than the window, the ``default_value`` is returned, or if it is "
+"not specified ``null`` is returned."
+msgstr ""

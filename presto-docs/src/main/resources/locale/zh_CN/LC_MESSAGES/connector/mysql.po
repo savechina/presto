@@ -1,0 +1,74 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/connector/mysql.rst:3
+msgid "MySQL Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:5
+msgid ""
+"The MySQL connector allows querying and creating tables in an external MySQL"
+" database. This can be used to join data between different systems like "
+"MySQL and Hive, or between two different MySQL instances."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:10
+msgid "Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:12
+msgid ""
+"To configure the MySQL connector, create a catalog properties file in "
+"``etc/catalog`` named, for example, ``mysql.properties``, to mount the MySQL"
+" connector as the ``mysql`` catalog. Create the file with the following "
+"contents, replacing the connection properties as appropriate for your setup:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:26
+msgid "Multiple MySQL Servers"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:28
+msgid ""
+"You can have as many catalogs as you need, so if you have additional MySQL "
+"servers, simply add another properties file to ``etc/catalog`` with a "
+"different name (making sure it ends in ``.properties``). For example, if you"
+" name the property file ``sales.properties``, Presto will create a catalog "
+"named ``sales`` using the configured connector."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:35
+msgid "Querying MySQL"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:37
+msgid ""
+"The MySQL connector provides a schema for every MySQL *database*. You can "
+"see the available MySQL databases by running ``SHOW SCHEMAS``::"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:42
+msgid ""
+"If you have a MySQL database named ``web``, you can view the tables in this "
+"database by running ``SHOW TABLES``::"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:47
+msgid "Finally, you can access the ``clicks`` table in the ``web`` database::"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/mysql.rst:51
+msgid ""
+"If you used a different name for your catalog properties file, use that "
+"catalog name instead of ``mysql`` in the above examples."
+msgstr ""

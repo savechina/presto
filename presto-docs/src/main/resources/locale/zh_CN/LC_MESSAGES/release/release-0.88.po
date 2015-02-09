@@ -1,0 +1,79 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.88.rst:3
+msgid "Release 0.88"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:6
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:8
+msgid "Added :func:`arbitrary` aggregation function."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:9
+msgid ""
+"Allow using all :doc:`/functions/aggregate` as :doc:`/functions/window`."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:10
+msgid ""
+"Support specifying window frames and correctly implement frames for all "
+":doc:`/functions/window`."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:11
+msgid ""
+"Allow :func:`approx_distinct` aggregation function to accept a standard "
+"error parameter."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:12
+msgid ""
+"Implement :func:`least` and :func:`greatest` with variable number of "
+"arguments."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:13
+msgid ""
+":ref:`array_type` is now comparable and can be used as ``GROUP BY`` keys or "
+"in ``ORDER BY`` expressions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:14
+msgid "Implement ``=`` and ``<>`` operators for :ref:`row_type`."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:15
+msgid "Fix excessive garbage creation in the ORC reader."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:16
+msgid ""
+"Fix an issue that could cause queries using :func:`row_number()` and "
+"``LIMIT`` to never terminate."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:17
+msgid ""
+"Fix an issue that could cause queries with :func:`row_number()` and specific"
+" filters to produce incorrect results."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.88.rst:18
+msgid ""
+"Fixed an issue that caused the Cassandra plugin to fail to load with a "
+"SecurityException."
+msgstr ""

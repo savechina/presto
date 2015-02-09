@@ -1,0 +1,87 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/conditional.rst:3
+msgid "Conditional Expressions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:6
+msgid "CASE"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:8
+msgid ""
+"The standard SQL ``CASE`` expression has two forms. The \"simple\" form "
+"searches each ``value`` expression from left to right until it finds one "
+"that equals ``expression``:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:20
+msgid ""
+"The ``result`` for the matching ``value`` is returned. If no match is found,"
+" the ``result`` from the ``ELSE`` clause is returned if it exists, otherwise"
+" null is returned. Example::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:31
+msgid ""
+"The \"searched\" form evaluates each boolean ``condition`` from left to "
+"right until one is true and returns the matching ``result``:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:42
+msgid ""
+"If no conditions are true, the ``result`` from the ``ELSE`` clause is "
+"returned if it exists, otherwise null is returned. Example::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:53
+msgid "IF"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:55
+msgid ""
+"The ``IF`` function is actually a language construct that is equivalent to "
+"the following ``CASE`` expression:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:67
+msgid ""
+"Evaluates and returns ``true_value`` if ``condition`` is true, otherwise "
+"null is returned and ``true_value`` is not evaluated."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:72
+msgid ""
+"Evaluates and returns ``true_value`` if ``condition`` is true, otherwise "
+"evaluates and returns ``false_value``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:76
+msgid "COALESCE"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:80
+msgid ""
+"Returns the first non-null ``value`` in the argument list. Like a ``CASE`` "
+"expression, arguments are only evaluated if necessary."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:84
+msgid "NULLIF"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/conditional.rst:88
+msgid ""
+"Returns null if ``value1`` equals ``value2``, otherwise returns ``value1``."
+msgstr ""

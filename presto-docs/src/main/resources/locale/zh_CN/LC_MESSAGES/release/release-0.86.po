@@ -1,0 +1,114 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.86.rst:3
+msgid "Release 0.86"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:6
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:8
+msgid ""
+"Add support for inequality ``INNER JOIN`` when each term of the condition "
+"refers to only one side of the join."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:9
+msgid "Add :func:`ntile` function."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:10
+msgid ""
+"Add :func:`map` function to create a map from arrays of keys and values."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:11
+msgid "Add :func:`min_by` aggregation function."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:12
+msgid "Add support for concatenating arrays with the ``||`` operator."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:13
+msgid "Add support for ``=`` and ``!=`` to ``JSON`` type."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:14
+msgid ""
+"Improve error message when ``DISTINCT`` is applied to types that are not "
+"comparable."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:15
+msgid ""
+"Perform type validation for ``IN`` expression where the right-hand side is a"
+" subquery expression."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:16
+msgid ""
+"Improve error message when ``ORDER BY ... LIMIT`` query exceeds its maximum "
+"memory allocation."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:17
+msgid ""
+"Improve error message when types that are not orderable are used in an "
+"``ORDER BY`` clause."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:18
+msgid ""
+"Improve error message when the types of the columns for subqueries of a "
+"``UNION`` query don't match."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:19
+msgid ""
+"Fix a regression where queries could be expired too soon on a highly loaded "
+"cluster."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:20
+msgid ""
+"Fix scheduling issue for queries involving tables from information_schema, "
+"which could result in inconsistent metadata."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:22
+msgid ""
+"Fix an issue with :func:`min_by` and :func:`max_by` that could result in an "
+"error when used with a variable-length type (e.g., ``VARCHAR``) in a ``GROUP"
+" BY`` query."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:24
+msgid "Fix rendering of array attributes in JMX connector."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:25
+msgid "Input rows/bytes are now tracked properly for ``JOIN`` queries."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:26
+msgid ""
+"Fix case-sensitivity issue when resolving names of constant table "
+"expressions."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.86.rst:27
+msgid "Fix unnesting arrays and maps that contain the ``ROW`` type."
+msgstr ""

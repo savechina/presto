@@ -1,0 +1,115 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.77.rst:3
+msgid "Release 0.77"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:6
+msgid "Parametric Types"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:7
+msgid ""
+"Presto now has a framework for implementing parametric types and functions. "
+"Support for :ref:`array_type` and :ref:`map_type` types has been added, "
+"including the element accessor operator ``[]``, and new "
+":doc:`/functions/array`."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:12
+msgid "Streaming Index Joins"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:13
+msgid ""
+"Index joins will now switch to use a key-by-key streaming join if index "
+"results fail to fit in the allocated index memory space."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:17
+msgid "Distributed Joins"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:18
+msgid ""
+"Joins where both tables are distributed are now supported. This allows "
+"larger tables to be joined, and can be enabled with the ``distributed-joins-"
+"enabled`` flag. It may perform worse than the existing broadcast join "
+"implementation because it requires redistributing both tables. This feature "
+"is still experimental, and should be used with caution."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:24
+msgid "Hive Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:25
+msgid "Handle spurious ``AbortedException`` when closing S3 input streams"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:26
+msgid "Add support for ORC, DWRF and Parquet in Hive"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:27
+msgid "Add support for ``DATE`` type in Hive"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:28
+msgid "Fix performance regression in Hive when reading ``VARCHAR`` columns"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:31
+msgid "Kafka Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:32
+msgid "Fix Kafka handling of default port"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:33
+msgid "Add support for Kafka messages with a null key"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:36
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:37
+msgid "Fix race condition in scheduler that could cause queries to hang"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:38
+msgid ""
+"Add ConnectorPageSource which is a more efficient interface for column-"
+"oriented sources"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:39
+msgid "Add support for string partition keys in Cassandra"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:40
+msgid "Add support for variable arity functions"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:41
+msgid "Add support for :func:`count` for all types"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.77.rst:42
+msgid ""
+"Fix bug in HashAggregation that could cause the operator to go in an "
+"infinite loop"
+msgstr ""

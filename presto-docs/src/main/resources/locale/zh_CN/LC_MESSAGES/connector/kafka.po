@@ -1,0 +1,954 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/connector/kafka.rst:3
+msgid "Kafka Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:5
+msgid ""
+"This connector allows the use of Apache Kafka topics as tables in Presto. "
+"Each message is presented as a row in Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:8
+msgid ""
+"Topics can be live: rows will appear as data arrives and disappear as "
+"segments get dropped. This can result in strange behavior if accessing the "
+"same table multiple times in a single query (e.g. performing a self join)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:14
+msgid ""
+"Apache Kafka 0.8+ is supported although it is highly recommend to use 0.8.1 "
+"or later."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:17
+msgid "Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:19
+msgid ""
+"To configure the Kafka connector, create a catalog properties file "
+"``etc/catalog/kafka.properties`` with the following contents, replacing the "
+"properties as appropriate:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:30
+msgid "Multiple Kafka Clusters"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:32
+msgid ""
+"You can have as many catalogs as you need, so if you have additional Kafka "
+"clusters, simply add another properties file to ``etc/catalog`` with a "
+"different name (making sure it ends in ``.properties``). For example, if you"
+" name the property file ``sales.properties``, Presto will create a catalog "
+"named ``sales`` using the configured connector."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:39
+msgid "Configuration Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:41
+msgid "The following configuration properties are available:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:44
+msgid "Property Name"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:44
+#: ../../src/main/sphinx/connector/kafka.rst:132
+#: ../../src/main/sphinx/connector/kafka.rst:189
+#: ../../src/main/sphinx/connector/kafka.rst:209
+#: ../../src/main/sphinx/connector/kafka.rst:230
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:46
+#: ../../src/main/sphinx/connector/kafka.rst:56
+msgid "``kafka.table-names``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:46
+msgid "List of all tables provided by the catalog"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:47
+#: ../../src/main/sphinx/connector/kafka.rst:70
+msgid "``kafka.default-schema``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:47
+msgid "Default schema name for tables"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:48
+#: ../../src/main/sphinx/connector/kafka.rst:78
+msgid "``kafka.nodes``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:48
+msgid "List of nodes in the Kafka cluster"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:49
+#: ../../src/main/sphinx/connector/kafka.rst:91
+msgid "``kafka.connect-timeout``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:49
+msgid "Timeout for connecting to the Kafka cluster"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:50
+#: ../../src/main/sphinx/connector/kafka.rst:100
+msgid "``kafka.buffer-size``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:50
+msgid "Kafka read buffer size"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:51
+#: ../../src/main/sphinx/connector/kafka.rst:109
+msgid "``kafka.table-description-dir``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:51
+msgid "Directory containing topic description files"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:52
+#: ../../src/main/sphinx/connector/kafka.rst:117
+msgid "``kafka.hide-internal-columns``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:52
+msgid "Controls whether internal columns are part of the table schema or not"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:58
+msgid ""
+"Comma-separated list of all tables provided by this catalog. A table name "
+"can be unqualified (simple name) and will be put into the default schema "
+"(see below) or qualified with a schema name (``<schema-name>.<table-"
+"name>``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:62
+msgid ""
+"For each table defined here, a table description file (see below) may exist."
+" If no table description file exists, the table name is used as the topic "
+"name on Kafka and no data columns are mapped into the table. The table will "
+"still contain all internal columns (see below)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:67
+msgid ""
+"This property is required; there is no default and at least one table must "
+"be defined."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:72
+msgid ""
+"Defines the schema which will contain all tables that were defined without a"
+" qualifying schema name."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:75
+msgid "This property is optional; the default is ``default``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:80
+msgid ""
+"A comma separated list of ``hostname:port`` pairs for the Kafka data nodes."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:82
+msgid ""
+"This property is required; there is no default and at least one node must be"
+" defined."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:86
+msgid ""
+"Presto must still be able to connect to all nodes of the cluster even if "
+"only a subset is specified here as segment files may be located only on a "
+"specifc node."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:93
+msgid ""
+"Timeout for connecting to a data node. A busy Kafka cluster may take quite "
+"some time before accepting a connection; when seeing failed queries due to "
+"timeouts, increasing this value is a good strategy."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:97
+msgid "This property is optional; the default is 10 seconds (``10s``)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:102
+msgid ""
+"Size of the internal data buffer for reading data from Kafka. The data "
+"buffer must be able to hold at least one message and ideally can hold many "
+"messages. There is one data buffer allocated per worker and data node."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:106
+msgid "This property is optional; the default is ``64kb``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:111
+msgid ""
+"References a folder within Presto deployment that holds one or more JSON "
+"files (must end with ``.json``) which contain table description files."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:114
+msgid "This property is optional; the default is ``etc/kafka``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:119
+msgid ""
+"In addition to the data columns defined in a table description file, the "
+"connector maintains a number of additional columns for each table. If these "
+"columns are hidden, they can still be used in queries but do not show up in "
+"``DESCRIBE <table-name>`` or ``SELECT *``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:124
+msgid "This property is optional; the default is ``true``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:127
+msgid "Internal Columns"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:129
+msgid "For each defined table, the connector maintains the following columns:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:132
+msgid "Column name"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:132
+#: ../../src/main/sphinx/connector/kafka.rst:189
+#: ../../src/main/sphinx/connector/kafka.rst:209
+#: ../../src/main/sphinx/connector/kafka.rst:230
+msgid "Type"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:134
+msgid "``_partition_id``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:134
+#: ../../src/main/sphinx/connector/kafka.rst:135
+#: ../../src/main/sphinx/connector/kafka.rst:136
+#: ../../src/main/sphinx/connector/kafka.rst:137
+#: ../../src/main/sphinx/connector/kafka.rst:138
+#: ../../src/main/sphinx/connector/kafka.rst:141
+#: ../../src/main/sphinx/connector/kafka.rst:144
+msgid "BIGINT"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:134
+msgid "ID of the Kafka partition which contains this row."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:135
+msgid "``_partition_offset``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:135
+msgid "Offset within the Kafka partition for this row."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:136
+msgid "``_segment_start``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:136
+msgid ""
+"Lowest offset in the segment (inclusive) which contains this row. This "
+"offset is partition specific."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:137
+msgid "``_segment_end``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:137
+msgid ""
+"Highest offset in the segment (exclusive) which contains this row. The "
+"offset is partition specific. This is the same value as ``_segment_start`` "
+"of the next segment (if it exists)."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:138
+msgid "``_segment_count``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:138
+msgid ""
+"Running count of for the current row within the segment. For an uncompacted "
+"topic, ``_segment_start + _segment_count`` is equal to "
+"``_partition_offset``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:139
+msgid "``_message_corrupt``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:139
+#: ../../src/main/sphinx/connector/kafka.rst:142
+msgid "BOOLEAN"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:139
+msgid ""
+"True if the decoder could not decode the message for this row. When true, "
+"data columns mapped from the message should be treated as invalid."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:140
+msgid "``_message``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:140
+#: ../../src/main/sphinx/connector/kafka.rst:143
+msgid "VARCHAR"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:140
+msgid ""
+"Message bytes as an UTF-8 encoded string. This is only useful for a text "
+"topic."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:141
+msgid "``_message_length``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:141
+msgid "Number of bytes in the message."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:142
+msgid "``_key_corrupt``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:142
+msgid ""
+"True if the key decode could not decode the key for this row. When true, "
+"data columns mapped from the key should be treated as invalid."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:143
+msgid "``_key``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:143
+msgid ""
+"Key bytes as an UTF-8 encoded string. This is only useful for textual keys."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:144
+msgid "``_key_length``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:144
+msgid "Number of bytes in the key."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:147
+msgid ""
+"For tables without a table definition file, the ``_key_corrupt`` and "
+"``_message_corrupt`` columns will always be ``false``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:151
+msgid "Table Definition Files"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:153
+msgid ""
+"Kafka maintains topics only as byte messages and leaves it to producers and "
+"consumers to define how a message should be interpreted. For Presto, this "
+"data must be mapped into columns to allow queries against the data."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:159
+msgid ""
+"For textual topics that contain JSON data, it is entirely possible to not "
+"use any table definition files, but instead use the Presto "
+":doc:`/functions/json` to parse the ``_message`` column which contains the "
+"bytes mapped into an UTF-8 string. This is, however, pretty cumbersome and "
+"makes it difficult to write SQL queries."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:165
+msgid ""
+"A table definition file consists of a JSON definition for a table. The name "
+"of the file can be arbitrary but must end in ``.json``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:189
+#: ../../src/main/sphinx/connector/kafka.rst:209
+#: ../../src/main/sphinx/connector/kafka.rst:230
+msgid "Field"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:189
+#: ../../src/main/sphinx/connector/kafka.rst:209
+#: ../../src/main/sphinx/connector/kafka.rst:230
+msgid "Required"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:191
+msgid "``tableName``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:191
+#: ../../src/main/sphinx/connector/kafka.rst:193
+#: ../../src/main/sphinx/connector/kafka.rst:211
+#: ../../src/main/sphinx/connector/kafka.rst:212
+#: ../../src/main/sphinx/connector/kafka.rst:232
+#: ../../src/main/sphinx/connector/kafka.rst:233
+msgid "required"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:191
+#: ../../src/main/sphinx/connector/kafka.rst:192
+#: ../../src/main/sphinx/connector/kafka.rst:193
+#: ../../src/main/sphinx/connector/kafka.rst:211
+#: ../../src/main/sphinx/connector/kafka.rst:232
+#: ../../src/main/sphinx/connector/kafka.rst:233
+#: ../../src/main/sphinx/connector/kafka.rst:234
+#: ../../src/main/sphinx/connector/kafka.rst:235
+#: ../../src/main/sphinx/connector/kafka.rst:236
+#: ../../src/main/sphinx/connector/kafka.rst:238
+msgid "string"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:191
+msgid "Presto table name defined by this file."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:192
+msgid "``schemaName``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:192
+#: ../../src/main/sphinx/connector/kafka.rst:194
+#: ../../src/main/sphinx/connector/kafka.rst:195
+#: ../../src/main/sphinx/connector/kafka.rst:234
+#: ../../src/main/sphinx/connector/kafka.rst:235
+#: ../../src/main/sphinx/connector/kafka.rst:236
+#: ../../src/main/sphinx/connector/kafka.rst:237
+#: ../../src/main/sphinx/connector/kafka.rst:238
+msgid "optional"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:192
+msgid ""
+"Schema which will contain the table. If omitted, the default schema name is "
+"used."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:193
+msgid "``topicName``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:193
+msgid "Kafka topic that is mapped."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:194
+msgid "``key``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:194
+#: ../../src/main/sphinx/connector/kafka.rst:195
+msgid "JSON object"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:194
+msgid "Field definitions for data columns mapped to the message key."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:195
+msgid "``message``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:195
+msgid "Field definitions for data columns mapped to the message itself."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:199
+msgid "Key and Message in Kafka"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:201
+msgid ""
+"Starting with Kafka 0.8, each Message in a topic can have an optional key. A"
+" table definition file contains sections for both key and message to map the"
+" data onto table columns."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:205
+msgid ""
+"Each of the ``key`` and ``message`` fields in the table definition is a JSON"
+" object that must contain two fields:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:211
+#: ../../src/main/sphinx/connector/kafka.rst:234
+msgid "``dataFormat``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:211
+msgid "Selects the decoder for this group of fields."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:212
+msgid "``fields``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:212
+msgid "JSON array"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:212
+msgid ""
+"A list of field definitions. Each field definition creates a new column in "
+"the Presto table."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:215
+msgid "Each field definition is a JSON object:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:232
+msgid "``name``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:232
+msgid "Name of the column in the Presto table."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:233
+msgid "``type``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:233
+msgid "Presto type of the column."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:234
+msgid ""
+"Selects the column decoder for this field. Default to the default decoder "
+"for this row data format and column type."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:235
+msgid "``mapping``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:235
+msgid ""
+"Mapping information for the column. This is decoder specific, see below."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:236
+msgid "``formatHint``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:236
+msgid "Sets a column specifc format hint to the column decoder."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:237
+msgid "``hidden``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:237
+msgid "boolean"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:237
+msgid ""
+"Hides the column from ``DESCRIBE <table name>`` and ``SELECT *``. Defaults "
+"to ``false``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:238
+msgid "``comment``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:238
+msgid "Add a column comment which is shown with ``DESCRIBE <table name>``."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:241
+msgid "There is no limit on field descriptions for either key or message."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:244
+msgid "Row Decoding"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:246
+msgid ""
+"For key and message, a decoder is used to map data onto columns. If no table"
+" definition file exists for a table, the ``dummy`` decoder is used."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:249
+msgid "The Kafka connector contains the following decoders:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:251
+msgid "``raw`` - do not convert the row data, use as raw bytes"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:252
+msgid "``csv`` - interpret the value as CSV"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:253
+msgid "``json`` - convert the value to a JSON object"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:255
+msgid ""
+"The main purpose of the decoders is to select the appropriate field decoders"
+" to interpret the message or key data."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:258
+msgid ""
+"Presto supports only four physical data types onto which the Presto types "
+"are mapped: boolean, long, double and a sequence of bytes which is treated "
+"as a string."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:263
+msgid "``raw`` Decoder"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:265
+msgid ""
+"The raw decoder supports reading of raw (byte based) values from a message "
+"or key and converting it into Presto columns."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:268
+#: ../../src/main/sphinx/connector/kafka.rst:317
+#: ../../src/main/sphinx/connector/kafka.rst:335
+msgid "For fields, the following attributes are supported:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:270
+#: ../../src/main/sphinx/connector/kafka.rst:319
+#: ../../src/main/sphinx/connector/kafka.rst:337
+msgid "``type`` - All Presto data types are supported"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:271
+msgid "``dataFormat`` - Only ``_default`` supported, can be omitted."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:272
+msgid "``mapping`` - selects the width of the data type converted"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:273
+msgid ""
+"``formatHint`` - optional, ``<start>[:<end>]``; start and end position of "
+"bytes to convert"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:275
+msgid ""
+"The ``mapping`` column selects the number of bytes converted. If absent, "
+"``BYTE`` is assumed. All values are signed."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:278
+msgid "Supported values are:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:280
+msgid "``BYTE`` - one byte"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:281
+msgid "``SHORT`` - two bytes"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:282
+msgid "``INT`` - four bytes"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:283
+msgid "``LONG`` - eight bytes"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:284
+msgid "``FLOAT`` - four bytes (IEEE 754 format)"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:285
+msgid "``DOUBLE`` - eight bytes (IEEE 754 format)"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:287
+msgid ""
+"The ``type`` column defines the Presto data type on which the value is "
+"mapped."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:289
+msgid ""
+"boolean based types require a mapping to ``BYTE``, ``SHORT``, ``INT`` or "
+"``LONG``. Any other type will throw a conversion error. A value of ``0`` "
+"returns false, everything else true."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:292
+msgid ""
+"long based types require a mapping to ``BYTE``, ``SHORT``, ``INT`` or "
+"``LONG``. Any other type will throw a conversion error."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:294
+msgid ""
+"double based types require a mapping to ``FLOAT`` or ``DOUBLE``. Any other "
+"type will throw a conversion error."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:296
+msgid ""
+"string based types require a mapping to ``BYTE``. Any other type will throw "
+"a conversion error."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:299
+msgid ""
+"The ``formatHint`` field specifies the position of the bytes in a key or "
+"message. It can be one or two numbers separated by a colon "
+"(``<start>[:<end>]``). If only a start position is given, the column will "
+"use the appropriate number of bytes for the type (see above). string based "
+"types (``VARCHAR``) will use all bytes to the end of the message. If start "
+"and end position is given, then for fixed with types the size must be at "
+"least the size of the type. For string based types, all bytes between start "
+"(inclusive) and end (exclusive) are used."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:309
+msgid "``csv`` Decoder"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:311
+msgid "The CSV decoder is of beta quality and should be used with caution."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:313
+msgid ""
+"The CSV decoder converts the bytes representing a message or key into a "
+"string using UTF-8 encoding and then interprets the result as a CSV (comma-"
+"separated value) line."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:320
+msgid "``dataFormat`` - Only ``_default`` supported, can be omitted"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:321
+msgid "``mapping`` - field index used for the column. Must be given"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:322
+msgid "``formatHint`` - not supported, ignored"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:324
+msgid ""
+"boolean based types return ``true`` if the field value is the string "
+"\"true\" (case insensitive), ``false`` otherwise."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:325
+msgid ""
+"long and double based types parse the field value according to Java long and"
+" double parse rules."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:326
+msgid "string types use the field as-is (text using UTF-8 encoding)"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:329
+msgid "``json`` Decoder"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:331
+msgid ""
+"The JSON decoder converts the bytes representing a message or key into a "
+"JSON according to :rfc:`4627`. Note that the message or key *MUST* convert "
+"into a JSON object, not an array or simple type."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:338
+msgid ""
+"``dataFormat`` - ``_default``, ``custom-date-time``, ``iso8601``, "
+"``rfc2822``, ``milliseconds-since-epoch``, ``seconds-since-epoch``. If "
+"missing, ``_default`` is used."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:340
+msgid ""
+"``mapping`` - slash-separated list of fields names to select a field from "
+"the JSON object."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:341
+msgid "``formatHint`` - only for ``custom-date-time``, see below."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:343
+msgid ""
+"The JSON decoder supports multiple field decoders, with ``_default`` being "
+"used for standard table columns and a number of decoders for date and time "
+"based types."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:348
+msgid "``_default`` Field decoder"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:350
+msgid ""
+"This is the standard field decoder supporting all the Presto physical data "
+"types. A field value will be coerced by JSON conversion rules into boolean, "
+"long, double or string values. For non-date/time based columns, this decoder"
+" should be used."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:356
+msgid "Date and Time Decoders"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:358
+msgid ""
+"To convert values from JSON objects into Presto ``DATE``, ``TIME`` or "
+"``TIMESTAMP`` columns, special decoders can be selected using the "
+"``dataFormat`` attribute of a field definition."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:363
+msgid "Text Decoders"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:365
+msgid ""
+"``iso8601`` - text based, parses a text field as an ISO 8601 timestamp."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:366
+msgid ""
+"``rfc2822`` - text based, parses a text field as an :rfc:`2822` timestamp."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:367
+msgid ""
+"``custom-date-time`` - text based, a formatting hint is required which is "
+"parsed as a Joda-Time formatting string."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:370
+#: ../../src/main/sphinx/connector/kafka.rst:383
+msgid "Presto Type"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:370
+#: ../../src/main/sphinx/connector/kafka.rst:383
+msgid "JSON Text"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:370
+#: ../../src/main/sphinx/connector/kafka.rst:383
+msgid "JSON Long"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:372
+#: ../../src/main/sphinx/connector/kafka.rst:385
+msgid "string type"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:372
+msgid "as-is"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:372
+#: ../../src/main/sphinx/connector/kafka.rst:373
+msgid "parse according to format type, return millis since epoch"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:373
+#: ../../src/main/sphinx/connector/kafka.rst:386
+msgid "long-based type"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:373
+msgid "return as millis since epoch"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:377
+msgid "Number Decoders"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:379
+msgid ""
+"``milliseconds-since-epoch`` - number based, interprets a text or number as "
+"number of milliseconds since the epoch."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:380
+msgid ""
+"``seconds-since-epoch`` - number based, interprets a text or number as "
+"number of milliseconds since the epoch."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:385
+msgid "parse as long, format as ISO8601"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:385
+msgid "format as ISO8601"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:386
+msgid "parse as long, return millis since epoch"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/kafka.rst:386
+msgid "return millis since epoch"
+msgstr ""

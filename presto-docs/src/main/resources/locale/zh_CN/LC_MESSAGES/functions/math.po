@@ -1,0 +1,216 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/math.rst:3
+msgid "Mathematical Functions and Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:6
+msgid "Mathematical Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:9
+msgid "Operator"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:9
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:11
+msgid "``+``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:11
+msgid "Addition"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:12
+msgid "``-``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:12
+msgid "Subtraction"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:13
+msgid "``*``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:13
+msgid "Multiplication"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:14
+msgid "``/``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:14
+msgid "Division (integer division performs truncation)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:15
+msgid "``%``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:15
+msgid "Modulus (remainder)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:19
+msgid "Mathematical Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:23
+msgid "Returns the absolute value of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:27
+msgid "Returns the cube root of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:31
+msgid "This is an alias for :func:`ceiling`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:35
+msgid "Returns ``x`` rounded up to the nearest integer."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:39
+msgid "Returns the constant Euler's number."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:43
+msgid "Returns Euler's number raised to the power of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:47
+msgid "Returns ``x`` rounded down to the nearest integer."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:51
+msgid "Returns the natural logarithm of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:55
+msgid "Returns the base 2 logarithm of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:59
+msgid "Returns the base 10 logarithm of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:63
+msgid "Returns the base ``b`` logarithm of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:67
+msgid "Returns the modulus (remainder) of ``n`` divided by ``m``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:71
+msgid "Returns the constant Pi."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:75
+msgid "Returns ``x`` raised to the power of ``p``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:79
+msgid "Alias for ``random()``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:83
+msgid "Returns a pseudo-random value in the range 0.0 <= x < 1.0"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:87
+msgid "Returns ``x`` rounded to the nearest integer."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:91
+msgid "Returns ``x`` rounded to ``d`` decimal places."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:95
+msgid "Returns the square root of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:98
+msgid "Trigonometric Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:100
+msgid "All trigonometric function arguments are expressed in radians."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:104
+msgid "Returns the arc cosine of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:108
+msgid "Returns the arc sine of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:112
+msgid "Returns the arc tangent of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:116
+msgid "Returns the arc tangent of ``y / x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:120
+msgid "Returns the cosine of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:124
+msgid "Returns the hyperbolic cosine of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:128
+msgid "Returns the sine of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:132
+msgid "Returns the tangent of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:136
+msgid "Returns the hyperbolic tangent of ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:139
+msgid "Floating Point Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:143
+msgid "Returns the constant representing positive infinity."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:147
+msgid "Determine if ``x`` is finite."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:151
+msgid "Determine if ``x`` is infinite."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:155
+msgid "Determine if ``x`` is not-a-number."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/math.rst:159
+msgid "Returns the constant representing not-a-number."
+msgstr ""

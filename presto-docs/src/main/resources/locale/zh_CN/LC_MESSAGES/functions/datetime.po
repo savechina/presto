@@ -1,0 +1,921 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/datetime.rst:3
+msgid "Date and Time Functions and Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:6
+msgid "Date and Time Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:9
+msgid "Operator"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:9
+msgid "Example"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:9
+msgid "Result"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:11
+#: ../../src/main/sphinx/functions/datetime.rst:12
+#: ../../src/main/sphinx/functions/datetime.rst:13
+#: ../../src/main/sphinx/functions/datetime.rst:14
+#: ../../src/main/sphinx/functions/datetime.rst:15
+#: ../../src/main/sphinx/functions/datetime.rst:16
+msgid "``+``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:11
+msgid "``date '2012-08-08' + interval '2' day``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:11
+msgid "``2012-08-10``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:12
+msgid "``time '01:00' + interval '3' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:12
+msgid "``04:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:13
+msgid "``timestamp '2012-08-08 01:00' + interval '29' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:13
+msgid "``2012-08-09 06:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:14
+msgid "``timestamp '2012-10-31 01:00' + interval '1' month``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:14
+msgid "``2012-11-30 01:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:15
+msgid "``interval '2' day + interval '3' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:15
+msgid "``2 03:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:16
+msgid "``interval '3' year + interval '5' month``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:16
+msgid "``3-5``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:17
+#: ../../src/main/sphinx/functions/datetime.rst:18
+#: ../../src/main/sphinx/functions/datetime.rst:19
+#: ../../src/main/sphinx/functions/datetime.rst:20
+#: ../../src/main/sphinx/functions/datetime.rst:21
+#: ../../src/main/sphinx/functions/datetime.rst:22
+msgid "``-``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:17
+msgid "``date '2012-08-08' - interval '2' day``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:17
+msgid "``2012-08-06``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:18
+msgid "``time '01:00' - interval '3' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:18
+msgid "``22:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:19
+msgid "``timestamp '2012-08-08 01:00' - interval '29' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:19
+msgid "``2012-08-06 20:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:20
+msgid "``timestamp '2012-10-31 01:00' - interval '1' month``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:20
+msgid "``2012-09-30 01:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:21
+msgid "``interval '2' day - interval '3' hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:21
+msgid "``1 21:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:22
+msgid "``interval '3' year - interval '5' month``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:22
+msgid "``2-7``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:26
+msgid "Time Zone Conversion"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:28
+msgid "The ``AT TIME ZONE`` operator sets the time zone of a timestamp::"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:37
+msgid "Date and Time Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:41
+msgid "Returns the current date as of the start of the query."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:45
+#: ../../src/main/sphinx/functions/datetime.rst:67
+msgid "Returns the current time as of the start of the query."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:49
+#: ../../src/main/sphinx/functions/datetime.rst:71
+msgid "Returns the current timestamp as of the start of the query."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:53
+msgid ""
+"Returns the current time zone in the format defined by IANA (e.g., "
+"``America/Los_Angeles``) or as fixed offset from UTC (e.g., ``+08:35``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:58
+msgid "Returns the UNIX timestamp ``unixtime`` as a timestamp."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:62
+msgid ""
+"Returns the UNIX timestamp ``unixtime`` as a timestamp with time zone using "
+"``hours`` and ``minutes`` for the time zone offset."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:75
+msgid "This is an alias for ``current_timestamp``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:79
+msgid "Returns ``timestamp`` as a UNIX timestamp."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:81
+msgid "The following SQL-standard functions do not use parenthesis:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:83
+msgid "``current_date``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:84
+msgid "``current_time``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:85
+msgid "``current_timestamp``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:86
+msgid "``localtime``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:87
+msgid "``localtimestamp``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:90
+msgid "Truncation Function"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:92
+msgid "The ``date_trunc`` function supports the following units:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:95
+#: ../../src/main/sphinx/functions/datetime.rst:119
+msgid "Unit"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:95
+msgid "Example Truncated Value"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:97
+#: ../../src/main/sphinx/functions/datetime.rst:121
+msgid "``second``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:97
+msgid "``2001-08-22 03:04:05.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:98
+#: ../../src/main/sphinx/functions/datetime.rst:122
+msgid "``minute``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:98
+msgid "``2001-08-22 03:04:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:99
+#: ../../src/main/sphinx/functions/datetime.rst:123
+msgid "``hour``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:99
+msgid "``2001-08-22 03:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:100
+#: ../../src/main/sphinx/functions/datetime.rst:124
+msgid "``day``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:100
+msgid "``2001-08-22 00:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:101
+#: ../../src/main/sphinx/functions/datetime.rst:125
+msgid "``week``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:101
+msgid "``2001-08-20 00:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:102
+#: ../../src/main/sphinx/functions/datetime.rst:126
+msgid "``month``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:102
+msgid "``2001-08-01 00:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:103
+#: ../../src/main/sphinx/functions/datetime.rst:127
+msgid "``quarter``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:103
+msgid "``2001-07-01 00:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:104
+#: ../../src/main/sphinx/functions/datetime.rst:128
+msgid "``year``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:104
+msgid "``2001-01-01 00:00:00.000``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:107
+msgid ""
+"The above examples use the timestamp ``2001-08-22 03:04:05.321`` as the "
+"input."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:111
+msgid "Returns ``x`` truncated to ``unit``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:114
+msgid "Interval Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:116
+msgid "The functions in this section support the following interval units:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:119
+#: ../../src/main/sphinx/functions/datetime.rst:148
+#: ../../src/main/sphinx/functions/datetime.rst:217
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:121
+msgid "Seconds"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:122
+msgid "Minutes"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:123
+msgid "Hours"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:124
+msgid "Days"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:125
+msgid "Weeks"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:126
+msgid "Months"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:127
+msgid "Quarters of a year"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:128
+msgid "Years"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:133
+msgid ""
+"Adds an interval ``value`` of type ``unit`` to ``timestamp``. Subtraction "
+"can be performed by using a negative value."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:138
+msgid "Returns ``timestamp2 - timestamp1`` expressed in terms of ``unit``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:141
+msgid "MySQL Date Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:143
+msgid ""
+"The functions in this section use a format string that is compatible with "
+"the MySQL ``date_parse`` and ``str_to_date`` functions. The following table,"
+" based on the MySQL manual, describes the format specifiers:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:148
+msgid "Specifier"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:150
+msgid "``%a``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:150
+msgid "Abbreviated weekday name (``Sun`` .. ``Sat``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:151
+msgid "``%b``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:151
+msgid "Abbreviated month name (``Jan`` .. ``Dec``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:152
+msgid "``%c``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:152
+msgid "Month, numeric (``0`` .. ``12``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:153
+msgid "``%D``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:153
+msgid ""
+"Day of the month with English suffix (``0th``, ``1st``, ``2nd``, ``3rd``, "
+"...)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:154
+msgid "``%d``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:154
+msgid "Day of the month, numeric (``00`` .. ``31``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:155
+msgid "``%e``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:155
+msgid "Day of the month, numeric (``0`` .. ``31``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:156
+msgid "``%f``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:156
+msgid "Microseconds (``000000`` .. ``999999``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:157
+msgid "``%H``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:157
+msgid "Hour (``00`` .. ``23``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:158
+msgid "``%h``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:158
+#: ../../src/main/sphinx/functions/datetime.rst:159
+msgid "Hour (``01`` .. ``12``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:159
+msgid "``%I``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:160
+msgid "``%i``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:160
+msgid "Minutes, numeric (``00`` .. ``59``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:161
+msgid "``%j``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:161
+msgid "Day of year (``001`` .. ``366``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:162
+msgid "``%k``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:162
+msgid "Hour (``0`` .. ``23``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:163
+msgid "``%l``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:163
+msgid "Hour (``1`` .. ``12``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:164
+msgid "``%M``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:164
+msgid "Month name (``January`` .. ``December``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:165
+msgid "``%m``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:165
+msgid "Month, numeric (``00`` .. ``12``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:166
+msgid "``%p``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:166
+msgid "``AM`` or ``PM``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:167
+msgid "``%r``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:167
+msgid "Time, 12-hour (``hh:mm:ss`` followed by ``AM`` or ``PM``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:168
+msgid "``%S``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:168
+#: ../../src/main/sphinx/functions/datetime.rst:169
+msgid "Seconds (``00`` .. ``59``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:169
+msgid "``%s``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:170
+msgid "``%T``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:170
+msgid "Time, 24-hour (``hh:mm:ss``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:171
+msgid "``%U``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:171
+msgid "Week (``00`` .. ``53``), where Sunday is the first day of the week"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:172
+msgid "``%u``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:172
+msgid "Week (``00`` .. ``53``), where Monday is the first day of the week"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:173
+msgid "``%V``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:173
+msgid ""
+"Week (``01`` .. ``53``), where Sunday is the first day of the week; used "
+"with ``%X``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:174
+msgid "``%v``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:174
+msgid ""
+"Week (``01`` .. ``53``), where Monday is the first day of the week; used "
+"with ``%x``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:175
+msgid "``%W``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:175
+msgid "Weekday name (``Sunday`` .. ``Saturday``)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:176
+msgid "``%w``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:176
+msgid ""
+"Day of the week (``0`` .. ``6``), where Sunday is the first day of the week"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:177
+msgid "``%X``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:177
+msgid ""
+"Year for the week where Sunday is the first day of the week, numeric, four "
+"digits; used with ``%V``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:178
+#: ../../src/main/sphinx/functions/datetime.rst:182
+msgid "``%x``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:178
+msgid ""
+"Year for the week, where Monday is the first day of the week, numeric, four "
+"digits; used with ``%v``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:179
+msgid "``%Y``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:179
+msgid "Year, numeric, four digits"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:180
+msgid "``%y``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:180
+msgid "Year, numeric (two digits)"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:181
+msgid "``%%``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:181
+msgid "A literal ``%`` character"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:182
+msgid "``x``, for any ``x`` not listed above"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:185
+msgid ""
+"The following specifiers are not currently supported: ``%D %U %u %V %X``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:189
+#: ../../src/main/sphinx/functions/datetime.rst:205
+msgid "Formats ``timestamp`` as a string using ``format``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:193
+msgid "Parses ``string`` into a timestamp using ``format``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:196
+msgid "Java Date Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:198
+msgid ""
+"The functions in this section use a format string that is compatible with "
+"the Java `SimpleDateFormat`_ pattern format."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:209
+msgid "Parses ``string`` into a timestamp with time zone using ``format``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:212
+msgid "Extraction Function"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:214
+msgid "The ``extract`` function supports the following fields:"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:217
+msgid "Field"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:219
+msgid "``YEAR``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:219
+msgid ":func:`year`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:220
+msgid "``QUARTER``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:220
+msgid ":func:`quarter`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:221
+msgid "``MONTH``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:221
+msgid ":func:`month`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:222
+msgid "``WEEK``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:222
+msgid ":func:`week`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:223
+msgid "``DAY``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:223
+#: ../../src/main/sphinx/functions/datetime.rst:224
+msgid ":func:`day`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:224
+msgid "``DAY_OF_MONTH``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:225
+msgid "``DAY_OF_WEEK``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:225
+#: ../../src/main/sphinx/functions/datetime.rst:226
+msgid ":func:`day_of_week`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:226
+msgid "``DOW``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:227
+msgid "``DAY_OF_YEAR``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:227
+#: ../../src/main/sphinx/functions/datetime.rst:228
+msgid ":func:`day_of_year`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:228
+msgid "``DOY``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:229
+msgid "``YEAR_OF_WEEK``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:229
+#: ../../src/main/sphinx/functions/datetime.rst:230
+msgid ":func:`year_of_week`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:230
+msgid "``YOW``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:231
+msgid "``HOUR``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:231
+msgid ":func:`hour`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:232
+msgid "``MINUTE``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:232
+msgid ":func:`minute`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:233
+msgid "``SECOND``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:233
+msgid ":func:`second`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:234
+msgid "``TIMEZONE_HOUR``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:234
+msgid ":func:`timezone_hour`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:235
+msgid "``TIMEZONE_MINUTE``"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:235
+msgid ":func:`timezone_minute`"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:238
+msgid ""
+"The types supported by the ``extract`` function vary depending on the field "
+"to be extracted. Most fields support all date and time types."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:243
+msgid "Returns ``field`` from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:245
+msgid ""
+"This SQL-standard function uses special syntax for specifying the arguments."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:248
+msgid "Convenience Extraction Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:252
+msgid "Returns the day of the month from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:256
+msgid "This is an alias for :func:`day`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:260
+msgid ""
+"Returns the ISO day of the week from ``x``. The value ranges from ``1`` "
+"(Monday) to ``7`` (Sunday)."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:265
+msgid ""
+"Returns the day of the year from ``x``. The value ranges from ``1`` to "
+"``366``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:270
+msgid "This is an alias for :func:`day_of_week`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:274
+msgid "This is an alias for :func:`day_of_year`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:278
+msgid ""
+"Returns the hour of the day from ``x``. The value ranges from ``0`` to "
+"``23``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:283
+msgid "Returns the minute of the hour from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:287
+msgid "Returns the month of the year from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:291
+msgid ""
+"Returns the quarter of the year from ``x``. The value ranges from ``1`` to "
+"``4``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:296
+msgid "Returns the second of the hour from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:300
+msgid "Returns the hour of the time zone offset from ``timestamp``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:304
+msgid "Returns the minute of the time zone offset from ``timestamp``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:308
+msgid ""
+"Returns the `ISO week`_ of the year from ``x``. The value ranges from ``1`` "
+"to ``53``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:315
+msgid "This is an alias for :func:`week`."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:319
+msgid "Returns the year from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:323
+msgid "Returns the year of the `ISO week`_ from ``x``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/datetime.rst:327
+msgid "This is an alias for :func:`year_of_week`."
+msgstr ""

@@ -1,0 +1,77 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/overview/use-cases.rst:3
+msgid "Use Cases"
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:5
+msgid ""
+"This section puts Presto into perspective so that prospective administrators"
+" and end users know what to expect from Presto."
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:10
+msgid "What Presto Is Not"
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:12
+msgid ""
+"Since Presto is being called a *database* by many members of the community, "
+"it makes sense to begin with a definition of what Presto is not."
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:15
+msgid ""
+"Do not mistake the fact that Presto understands SQL with it providing the "
+"features of a standard database. Presto is not a general-purpose relational "
+"database. It is not a replacement for databases like MySQL, PostgreSQL or "
+"Oracle. Presto was not designed to handle Online Transaction Processing "
+"(OLTP). This is also true for many other databases designed and optimized "
+"for data warehousing or analytics."
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:24
+msgid "What Presto Is"
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:26
+msgid ""
+"Presto is a tool designed to efficiently query vast amounts of data using "
+"distributed queries. If you work with terabytes or petabytes of data, you "
+"are likely using tools that interact with Hadoop and HDFS. Presto was "
+"designed as an alternative to tools that query HDFS using pipelines of "
+"MapReduce jobs such as Hive or Pig, but Presto is not limited to accessing "
+"HDFS. Presto can be and has been extended to operate over different kinds of"
+" data sources including traditional relational databases and other data "
+"sources such as Cassandra."
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:35
+msgid ""
+"Presto was designed to handle data warehousing and analytics: data analysis,"
+" aggregating large amounts of data and producing reports. These workloads "
+"are often classified as Online Analytical Processing (OLAP)."
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:41
+msgid "Who uses Presto?"
+msgstr ""
+
+#: ../../src/main/sphinx/overview/use-cases.rst:43
+msgid ""
+"Presto is an open source project that operates under the auspices of "
+"Facebook. It was invented at Facebook and the project continues to be "
+"developed by both Facebook internal developers and a number of third-party "
+"developers in the community."
+msgstr ""

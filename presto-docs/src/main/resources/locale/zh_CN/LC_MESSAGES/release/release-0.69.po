@@ -1,0 +1,160 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.69.rst:3
+msgid "Release 0.69"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:7
+msgid ""
+"The following config properties must be removed from the "
+"``etc/config.properties`` file on both the coordinator and workers:"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:10
+msgid "``presto-metastore.db.type``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:11
+msgid "``presto-metastore.db.filename``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:13
+msgid ""
+"Additionally, the ``datasources`` property is now deprecated and should also"
+" be removed (see `Datasource Configuration`_)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:17
+msgid "Prevent Scheduling Work on Coordinator"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:19
+msgid ""
+"We have a new config property, ``node-scheduler.include-coordinator``, that "
+"allows or disallows scheduling work on the coordinator. Previously, tasks "
+"like final aggregations could be scheduled on the coordinator. For larger "
+"clusters, processing work on the coordinator can impact query performance "
+"because the machine's resources are not available for the critical task of "
+"scheduling, managing and monitoring query execution."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:27
+msgid ""
+"We recommend setting this property to ``false`` for the coordinator. See "
+":ref:`config_properties` for an example."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:31
+msgid "Datasource Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:33
+msgid ""
+"The ``datasources`` config property has been deprecated. Please remove it "
+"from your ``etc/config.properties`` file. The datasources configuration is "
+"now automatically generated based on the ``node-scheduler.include-"
+"coordinator`` property (see `Prevent Scheduling Work on Coordinator`_)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:40
+msgid "Raptor Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:42
+msgid ""
+"Presto has an extremely experimental connector that was previously called "
+"the ``native`` connector and was intertwined with the main Presto code (it "
+"was written before Presto had connectors). This connector is now named "
+"``raptor`` and lives in a separate plugin."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:47
+msgid ""
+"As part of this refactoring, the ``presto-metastore.db.type`` and ``presto-"
+"metastore.db.filename`` config properties no longer exist and must be "
+"removed from ``etc/config.properties``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:51
+msgid ""
+"The Raptor connector stores data on the Presto machines in a columnar format"
+" using the same layout that Presto uses for in-memory data. Currently, it "
+"has major limitations: lack of replication, dropping a table does not "
+"reclaim the storage, etc. It is only suitable for experimentation, temporary"
+" tables, caching of data from slower connectors, etc. The metadata and data "
+"formats are subject to change in incompatible ways between releases."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:59
+msgid ""
+"If you would like to experiment with the connector, create a catalog "
+"properties file such as ``etc/catalog/raptor.properties`` on both the "
+"coordinator and workers that contains the following:"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:70
+msgid "Machine Learning Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:72
+msgid ""
+"Presto now has functions to train and use machine learning models "
+"(classifiers and regressors). This is currently only a proof of concept and "
+"is not ready for use in production. Example usage is as follows::"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:83
+msgid ""
+"In the above example, the column ``label`` is a ``bigint`` and the column "
+"``features`` is a map of feature identifiers to feature values. The feature "
+"identifiers must be integers (encoded as strings because JSON only supports "
+"strings for map keys) and the feature values are numbers (floating point)."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:89
+msgid "Variable Length Binary Type"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:91
+msgid ""
+"Presto now supports the ``varbinary`` type for variable length binary data. "
+"Currently, the only supported function is :func:`length`. The Hive connector"
+" now maps the Hive ``BINARY`` type to ``varbinary``."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:96
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:98
+msgid ""
+"Add missing operator: ``timestamp with time zone`` - ``interval year to "
+"month``"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:99
+msgid "Support explaining sampled queries"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:100
+msgid "Add JMX stats for abandoned and canceled queries"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:101
+msgid "Add ``javax.inject`` to parent-first class list for plugins"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.69.rst:102
+msgid "Improve error categorization in event logging"
+msgstr ""

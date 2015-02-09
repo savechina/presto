@@ -1,0 +1,208 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/connector/hive.rst:3
+msgid "Hive Connector"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:5
+msgid ""
+"The Hive connector allows querying data stored in a Hive data warehouse. "
+"Hive is a combination of three components:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:8
+msgid ""
+"Data files in varying formats that are typically stored in the Hadoop "
+"Distributed File System (HDFS) or in Amazon S3."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:10
+msgid ""
+"Metadata about how the data files are mapped to schemas and tables. This "
+"metadata is stored in a database such as MySQL and is accessed via the Hive "
+"metastore service."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:13
+msgid ""
+"A query language called HiveQL. This query language is executed on a "
+"distributed computing framework such as MapReduce or Tez."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:16
+msgid ""
+"Presto only uses the first two components: the data and the metadata. It "
+"does not use HiveQL or any part of Hive's execution environment."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:20
+msgid "Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:22
+msgid "Presto includes Hive connectors for multiple versions of Hadoop:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:24
+msgid "``hive-hadoop1``: Apache Hadoop 1.x"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:25
+msgid "``hive-hadoop2``: Apache Hadoop 2.x"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:26
+msgid "``hive-cdh4``: Cloudera CDH 4"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:27
+msgid "``hive-cdh5``: Cloudera CDH 5"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:29
+msgid ""
+"Create ``etc/catalog/hive.properties`` with the following contents to mount "
+"the ``hive-cdh4`` connector as the ``hive`` catalog, replacing ``hive-cdh4``"
+" with the proper connector for your version of Hadoop and "
+"``example.net:9083`` with the correct host and port for your Hive metastore "
+"Thrift service:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:41
+msgid "Multiple Hive Clusters"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:43
+msgid ""
+"You can have as many catalogs as you need, so if you have additional Hive "
+"clusters, simply add another properties file to ``etc/catalog`` with a "
+"different name (making sure it ends in ``.properties``). For example, if you"
+" name the property file ``sales.properties``, Presto will create a catalog "
+"named ``sales`` using the configured connector. If you are connecting to "
+"more than one Hive metastore, you can create any number of properties files "
+"configuring multiple instances of the Hive connector."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:53
+msgid "HDFS Configuration"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:55
+msgid ""
+"Presto configures the HDFS client automatically for most setups and does not"
+" require any configuration files. In some rare cases, such as when using "
+"federated HDFS, it may be necessary to specify additional HDFS client "
+"options in order to access your HDFS cluster. To do so, add the "
+"``hive.config.resources`` property to reference your HDFS config files:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:65
+msgid ""
+"Only specify additional configuration files if absolutely necessary. We also"
+" recommend reducing the configuration files to have the minimum set of "
+"required properties, as additional properties may cause problems."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:70
+msgid "Configuration Properties"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:73
+msgid "Property Name"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:73
+msgid "Description"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:73
+msgid "Example"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:75
+msgid "``hive.metastore.uri``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:75
+msgid ""
+"The URI of the Hive Metastore to connect to using the Thrift protocol. This "
+"property is required."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:75
+msgid "``thrift://192.0.2.3:9083``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:78
+msgid "``hive.config.resources``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:78
+msgid ""
+"An optional comma-separated list of HDFS configuration files. These files "
+"must exist on the machines running Presto. Only specify this if absolutely "
+"necessary to access HDFS."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:78
+msgid "``/etc/hdfs-site.xml``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:83
+msgid "``hive.storage-format``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:83
+msgid "The default file format used when creating new tables"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:83
+msgid "``RCBINARY``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:85
+msgid "``hive.force-local-scheduling``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:85
+msgid ""
+"Force splits to be scheduled on the same node as the Hadoop DataNode process"
+" serving the split data.  This is useful for installations where Presto is "
+"collocated with every DataNode."
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:85
+msgid "``true``"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:92
+msgid "Querying Hive Tables"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:94
+msgid ""
+"The following table is an example Hive table from the `Hive Tutorial`_. It "
+"can be created in Hive (not in Presto) using the following Hive ``CREATE "
+"TABLE`` command:"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:114
+msgid ""
+"Assuming that this table was created in the ``web`` schema in Hive, this "
+"table can be described in Presto::"
+msgstr ""
+
+#: ../../src/main/sphinx/connector/hive.rst:132
+msgid "This table can then be queried in Presto::"
+msgstr ""

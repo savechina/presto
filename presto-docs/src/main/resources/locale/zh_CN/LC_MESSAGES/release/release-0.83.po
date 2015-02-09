@@ -1,0 +1,67 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.83.rst:3
+msgid "Release 0.83"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:6
+msgid "Raptor Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:7
+msgid ""
+"Raptor now enables specifying the backup storage location. This feature is "
+"highly experimental."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:8
+msgid "Fix the handling of shards not assigned to any node."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:11
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:13
+msgid "Fix resource leak in query queues."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:14
+msgid "Fix NPE when writing null ``ARRAY/MAP`` to Hive."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:15
+msgid "Fix :func:`json_array_get` to handle nested structures."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:16
+msgid "Fix ``UNNEST`` on null collections."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:17
+msgid ""
+"Fix a regression where queries that fail during parsing or analysis do not "
+"expire."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:18
+msgid "Make ``JSON`` type comparable."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.83.rst:19
+msgid ""
+"Added an optimization for hash aggregations. This optimization is turned off"
+" by default. To turn it on, add ``optimizer.optimize-hash-generation=true`` "
+"to the coordinator config properties."
+msgstr ""

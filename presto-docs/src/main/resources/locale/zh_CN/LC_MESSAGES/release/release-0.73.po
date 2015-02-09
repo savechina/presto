@@ -1,0 +1,40 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/release/release-0.73.rst:3
+msgid "Release 0.73"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.73.rst:6
+msgid "Cassandra Plugin"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.73.rst:8
+msgid ""
+"The Cassandra connector now supports CREATE TABLE and DROP TABLE. "
+"Additionally, the connector now takes into account Cassandra indexes when "
+"generating CQL. This release also includes several bug fixes and performance"
+" improvements."
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.73.rst:13
+msgid "General Changes"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.73.rst:15
+msgid "New window functions: :func:`lead`, and :func:`lag`"
+msgstr ""
+
+#: ../../src/main/sphinx/release/release-0.73.rst:17
+msgid "New scalar function: :func:`json_size`"
+msgstr ""

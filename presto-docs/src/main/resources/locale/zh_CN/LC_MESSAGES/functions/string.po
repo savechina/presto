@@ -1,0 +1,111 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Presto 0.94-SNAPSHOT\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-09 22:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../src/main/sphinx/functions/string.rst:3
+msgid "String Functions and Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:6
+msgid "String Operators"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:8
+msgid "The ``||`` operator performs concatenation."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:11
+msgid "String Functions"
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:15
+msgid ""
+"Currently, all of the string functions work incorrectly for Unicode (non-"
+"ASCII) strings. They operate as if strings are a sequence of UTF-8  bytes "
+"rather than a sequence of Unicode characters. For example, :func:`length` "
+"returns the number of bytes in the UTF-8 representation of the string rather"
+" than the number of unicode characters."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:23
+msgid "Returns the Unicode code point ``n`` as a single character string."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:27
+msgid ""
+"Returns the concatenation of ``string1`` and ``string2``. This function "
+"provides the same functionality as the SQL-standard concatenation operator "
+"(``||``)."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:33
+msgid "Returns the length of ``string`` in characters."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:37
+msgid "Converts ``string`` to lowercase."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:41
+msgid "Removes leading spaces from ``string``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:45
+msgid "Removes all instances of ``search`` from ``string``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:49
+msgid "Replaces all instances of ``search`` with ``replace`` in ``string``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:53
+msgid "Returns ``string`` with the characters in reverse order."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:57
+msgid "Removes trailing spaces from ``string``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:61
+msgid ""
+"Splits ``string`` on ``delimiter`` and returns the field ``index``. Field "
+"indexes start with ``1``. If the index is larger than than the number of "
+"fields, then null is returned."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:67
+msgid ""
+"Returns the starting position of the first instance of ``substring`` in "
+"``string``. Positions start with ``1``. If not found, ``0`` is returned."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:72
+msgid ""
+"Returns the rest of ``string`` from the starting position ``start``. "
+"Positions start with ``1``. A negative starting position is interpreted as "
+"being relative to the end of the string."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:78
+msgid ""
+"Returns a substring from ``string`` of length ``length`` from the starting "
+"position ``start``. Positions start with ``1``. A negative starting position"
+" is interpreted as being relative to the end of the string."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:84
+msgid "Removes leading and trailing spaces from ``string``."
+msgstr ""
+
+#: ../../src/main/sphinx/functions/string.rst:88
+msgid "Converts ``string`` to uppercase."
+msgstr ""
