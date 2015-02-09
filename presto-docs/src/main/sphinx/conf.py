@@ -66,6 +66,10 @@ extensions = ['download']
 
 templates_path = ['_templates']
 
+locale_dirs = ['../resources/locale']   # path is example but recommended.
+
+gettext_compact = False     # optional.
+
 source_suffix = '.rst'
 
 master_doc = 'index'
